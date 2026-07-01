@@ -1,0 +1,259 @@
+
+/* ==================== CONFIRM EMAIL SPECIFIC STYLES ==================== */
+
+.confirm-wrapper {
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm-modal {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Success Icon */
+.success-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  animation: icon-appear 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes icon-appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-45deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.icon-circle {
+  width: 96px;
+  height: 96px;
+  background: linear-gradient(135deg, #4d2f24 0%, #3b251d 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 40px rgba(59, 37, 29, 0.3),
+    0 0 0 8px rgba(59, 37, 29, 0.1);
+  position: relative;
+  animation: pulse-ring-icon 2s ease-in-out infinite;
+}
+
+@keyframes pulse-ring-icon {
+
+  0%,
+  100% {
+    box-shadow: 0 10px 40px rgba(59, 37, 29, 0.3),
+      0 0 0 8px rgba(59, 37, 29, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 10px 40px rgba(59, 37, 29, 0.4),
+      0 0 0 12px rgba(59, 37, 29, 0.15);
+  }
+}
+
+.mail-icon {
+  color: white;
+  animation: mail-bounce 1s ease-in-out infinite;
+}
+
+@keyframes mail-bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* OTP Container */
+.otp-container {
+  margin-bottom: 2rem;
+}
+
+.otp-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.otp-inputs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.otp-input {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: #f9fafb;
+  color: #1f2937;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.otp-input:focus {
+  border-color: #3b251d;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(59, 37, 29, 0.1);
+  transform: scale(1.05);
+}
+
+.otp-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.otp-input.input-error {
+  border-color: #ef4444;
+  background: #fef2f2;
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px);
+  }
+
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* Resend Section */
+.resend-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid #f0f0f0;
+  text-align: center;
+}
+
+.resend-text {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.resend-btn {
+  background: none;
+  border: none;
+  color: #3b251d;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resend-btn:not(:disabled):hover {
+  color: #2e1d17;
+  text-decoration: underline;
+}
+
+.resend-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.resending-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mini-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(59, 37, 29, 0.3);
+  border-top: 2px solid #3b251d;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Alternative Section */
+.alternative-section {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.alternative-text {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Success Alert */
+.alert-success {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  color: #065f46;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: 2px solid #6ee7b7;
+  animation: alert-appear 0.4s ease;
+}
+
+@keyframes alert-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .otp-inputs {
+    gap: 0.5rem;
+  }
+
+  .otp-input {
+    height: 50px;
+    font-size: 1.25rem;
+  }
+
+  .icon-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .mail-icon {
+    width: 40px;
+    height: 40px;
+  }
+}

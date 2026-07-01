@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /confirm-email
+Allow: /
+
+Sitemap: https://rentusco.com/sitemap.xml

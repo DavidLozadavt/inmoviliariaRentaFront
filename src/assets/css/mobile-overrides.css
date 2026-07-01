@@ -1,0 +1,52 @@
+/* ============================================================
+   RENTUS COMPLEMENTARY MOBILE STYLES
+   (Home View specific overrides are now handled inside HomeView.vue for max specificity)
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    :root {
+        --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    * {
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+
+    body {
+        padding-bottom: calc(75px + var(--safe-area-bottom)) !important;
+        background: #fafafa !important;
+    }
+
+    .nav-item-mobile {
+        color: rgba(255, 255, 255, 0.6) !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 4px !important;
+        text-decoration: none !important;
+    }
+
+    .nav-item-mobile.active {
+        color: #da9c5f !important;
+    }
+
+    /* --- Voice Assistant Fix --- */
+    .va-root {
+        bottom: calc(90px + var(--safe-area-bottom)) !important;
+        right: 16px !important;
+        z-index: 5100 !important;
+    }
+
+    /* --- General Property Cards --- */
+    .properties-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 25px !important;
+    }
+
+    .property-card {
+        width: 100% !important;
+        border-radius: 18px !important;
+    }
+}

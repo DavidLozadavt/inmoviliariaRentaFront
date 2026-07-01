@@ -1,0 +1,1256 @@
+{
+  "editProperty": {
+    "loading": "Cargando propiedad...",
+    "errorTitle": "Error al cargar",
+    "backToProperties": "Volver a Propiedades",
+    "breadcrumb": {
+      "properties": "Propiedades",
+      "edit": "Editar"
+    },
+    "title": "Editar Propiedad",
+    "subtitle": "Actualiza la información de tu propiedad",
+    "sections": {
+      "basicInfo": "Información Básica",
+      "location": "Ubicación",
+      "features": "Características",
+      "image": "Imagen",
+      "services": "Servicios Incluidos"
+    },
+    "fields": {
+      "title": "Título",
+      "description": "Descripción",
+      "status": "Estado",
+      "monthlyPrice": "Precio Mensual",
+      "address": "Dirección",
+      "city": "Ciudad",
+      "latitude": "Latitud",
+      "longitude": "Longitud",
+      "area": "Área (m²)",
+      "bedrooms": "Habitaciones",
+      "bathrooms": "Baños",
+      "parking": "Parqueaderos",
+      "imageUrl": "URL de la Imagen"
+    },
+    "placeholders": {
+      "title": "Ej: Apartamento moderno en el centro",
+      "description": "Describe las características principales de la propiedad...",
+      "address": "Ej: Calle 10 #15-20",
+      "city": "Ej: Popayán",
+      "imageUrl": "https://ejemplo.com/imagen.jpg"
+    },
+    "status": {
+      "available": "Disponible",
+      "rented": "Arrendada",
+      "maintenance": "En Mantenimiento"
+    },
+    "services": {
+      "water": "Agua",
+      "electricity": "Electricidad",
+      "gas": "Gas",
+      "internet": "Internet",
+      "cableTv": "TV por Cable",
+      "security": "Seguridad",
+      "parking": "Parqueadero",
+      "gym": "Gimnasio",
+      "pool": "Piscina",
+      "bbqArea": "Zona BBQ",
+      "laundry": "Lavandería",
+      "elevator": "Ascensor"
+    },
+    "buttons": {
+      "cancel": "Cancelar",
+      "save": "Guardar Cambios",
+      "saving": "Guardando..."
+    },
+    "messages": {
+      "updateSuccess": "¡Propiedad actualizada exitosamente!",
+      "updateError": "Error al actualizar la propiedad",
+      "noPermission": "No tienes permisos para editar esta propiedad",
+      "cancelConfirm": "¿Estás seguro de que deseas cancelar? Los cambios no guardados se perderán."
+    },
+    "errors": {
+      "loadError": "No se pudo cargar la propiedad",
+      "noPermission": "No tienes permisos para editar esta propiedad",
+      "mustLogin": "Debes iniciar sesión para editar propiedades"
+    },
+    "eyebrow": "Edición",
+    "sectionDescriptions": {
+      "basicInfo": "Título, descripción, estado y precio de la propiedad",
+      "location": "Dirección, ciudad y coordenadas GPS",
+      "features": "Área, habitaciones, baños y parqueadero",
+      "images": "Administra las fotos de tu propiedad — mínimo 1, máximo 10",
+      "services": "Servicios incluidos en el precio del arrendamiento"
+    },
+    "images": {
+      "current": "Imágenes actuales",
+      "principal": "Principal",
+      "add": "Agregar nuevas imágenes",
+      "dropzone": {
+        "title": "Arrastra nuevas imágenes aquí o haz clic",
+        "description": "JPG · PNG · WEBP · máx. 5 MB"
+      },
+      "new": "Nueva",
+      "delete": "Eliminar"
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "Tu hogar ideal te espera",
+      "title": "Encuentra el",
+      "titleHighlight": "hogar perfecto",
+      "titleEnd": "para tu estilo de vida",
+      "description": "Te acompañamos en cada paso para que encuentres una casa que encaje con tu vida y tus planes. Descubre propiedades exclusivas.",
+      "stats": {
+        "properties": "Propiedades",
+        "clients": "Clientes Felices",
+        "experience": "Años de Experiencia"
+      },
+      "floatingCards": {
+        "verified": "Propiedades Verificadas",
+        "rated": "Mejor Valoradas"
+      },
+      "map": {
+        "login": "Inicia sesión para explorar el mapa",
+        "explore": "Explorar en el mapa",
+        "properties": "propiedades",
+        "trend": "Tendencia"
+      }
+    },
+    "search": {
+      "title": "Encuentra tu próximo hogar",
+      "fields": {
+        "search": {
+          "label": "Buscar",
+          "placeholder": "Buscar por título, descripción o ubicación..."
+        },
+        "location": {
+          "label": "Ubicación",
+          "placeholder": "¿Dónde quieres vivir?"
+        },
+        "type": {
+          "label": "Tipo de Propiedad",
+          "all": "Todos los tipos",
+          "house": "Casa",
+          "apartment": "Apartamento",
+          "commercial": "Local Comercial",
+          "farm": "Finca"
+        },
+        "budget": {
+          "label": "Presupuesto Máximo",
+          "placeholder": "Ej: 2,000,000"
+        }
+      },
+      "button": "Buscar",
+      "filters": {
+        "active": "Filtros Activos:",
+        "clear": "Limpiar",
+        "advanced": "Filtros",
+        "reset": "Limpiar todo"
+      },
+      "suggestions": {
+        "loading": "Buscando ubicaciones..."
+      }
+    },
+    "properties": {
+      "badge": "Propiedades Destacadas",
+      "title": "Descubre Nuestras",
+      "titleHighlight": "Mejores Opciones",
+      "description": "Propiedades cuidadosamente seleccionadas para ti",
+      "loading": "Cargando propiedades increíbles...",
+      "error": "No pudimos cargar los datos en este momento",
+      "retry": "Intentar de nuevo",
+      "card": {
+        "status": {
+          "available": "Disponible",
+          "rented": "Arrendada",
+          "reserved": "Ocupado",
+          "sold": "Vendido",
+          "maintenance": "En mantenimiento"
+        },
+        "priceLabel": "Precio Mensual",
+        "perMonth": "/mes",
+        "features": {
+          "area": "Área",
+          "bedrooms": "Habitaciones",
+          "bathrooms": "Baños"
+        },
+        "viewDetails": "Ver Detalles",
+        "favorite": "Favorito",
+        "share": "Compartir"
+      },
+      "empty": {
+        "title": "No encontramos propiedades",
+        "description": "Intenta ajustar tus criterios de búsqueda",
+        "clearFilters": "Limpiar filtros"
+      },
+      "viewMore": {
+        "showing": "Mostrando",
+        "of": "de",
+        "properties": "propiedades",
+        "button": "Explorar Todas las Propiedades"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para encontrar tu hogar ideal?",
+      "description": "Contáctanos y te ayudaremos a encontrar la propiedad perfecta para ti",
+      "viewProperties": "Ver Propiedades",
+      "contact": "Contactar"
+    },
+    "modal": {
+      "close": "Cerrar",
+      "sections": {
+        "location": {
+          "title": "Ubicación",
+          "notAvailable": "No disponible"
+        },
+        "features": {
+          "title": "Características",
+          "area": "Área:",
+          "bedrooms": "Habitaciones:",
+          "bathrooms": "Baños:"
+        },
+        "services": {
+          "title": "Servicios Incluidos",
+          "none": "No hay servicios incluidos"
+        },
+        "publication": {
+          "title": "Publicación",
+          "publishedAgo": "Publicado hace"
+        },
+        "description": {
+          "title": "Descripción",
+          "notAvailable": "Sin descripción disponible"
+        },
+        "map": {
+          "title": "Ubicación Exacta",
+          "viewFullMap": "Ver en Mapa Completo",
+          "latitude": "Latitud:",
+          "longitude": "Longitud:",
+          "notRegistered": "Esta propiedad aún no tiene ubicación registrada"
+        },
+        "actions": {
+          "requestVisit": "Solicitar Cita de Visita",
+          "unavailable": {
+            "title": "Propiedad No Disponible",
+            "description": "Actualmente esta propiedad no está disponible para visitas"
+          }
+        }
+      },
+      "gallery": "Galería"
+    }
+  },
+  "navbar": {
+    "links": {
+      "home": "Inicio",
+      "properties": "Propiedades",
+      "about": "Nosotros"
+    },
+    "auth": {
+      "login": "Iniciar Sesión",
+      "logout": "Cerrar Sesión",
+      "greeting": "Hola"
+    },
+    "dropdown": {
+      "myProfile": "Mi Perfil",
+      "notifications": "Notificaciones",
+      "contracts": "Contratos",
+      "payments": "Pagos",
+      "sections": {
+        "requests": "Solicitudes",
+        "settings": "Configuración"
+      },
+      "maintenance": "Mantenimiento",
+      "ownerRequests": "Solicitudes (Dueño)",
+      "myRequests": "Mis Solicitudes",
+      "adminPanel": "Panel de Administración",
+      "myReports": "Mis reportes",
+      "settings": "Ajustes"
+    },
+    "alerts": {
+      "logoutSuccess": {
+        "title": "¡Hasta pronto!",
+        "message": "Sesión cerrada exitosamente"
+      },
+      "logoutError": {
+        "title": "Error",
+        "message": "No se pudo cerrar la sesión correctamente"
+      },
+      "maintenanceSuccess": {
+        "title": "¡Solicitud enviada!",
+        "message": "Tu solicitud de mantenimiento ha sido registrada"
+      }
+    }
+  },
+  "property": {
+    "loadingDetails": "Cargando detalles de la propiedad...",
+    "notFound": "Propiedad no encontrada",
+    "backHome": "Volver al inicio",
+    "properties": "Propiedades",
+    "status": {
+      "available": "Disponible",
+      "rented": "Rentada",
+      "reserved": "Reservada",
+      "sold": "Vendida",
+      "maintenance": "Mantenimiento"
+    },
+    "imageAlt": "Vista {index}",
+    "type": {
+      "casa": "Casa",
+      "apartamento": "Apartamento",
+      "local": "Local Comercial",
+      "finca": "Finca",
+      "propiedad": "Propiedad",
+      "otro": "Otro"
+    },
+    "featured": "Destacada",
+    "new": "Nueva",
+    "petFriendly": "Mascotas",
+    "monthlyPrice": "Precio mensual",
+    "deposit": "Depósito",
+    "mainFeatures": "Características Principales",
+    "areaM2": "m² de área",
+    "bedrooms": "Habitaciones",
+    "bathrooms": "Baños",
+    "parkingSpaces": "Parqueaderos",
+    "floor": "Piso {number}",
+    "floorLabel": "Ubicación",
+    "yearBuilt": "Año",
+    "description": "Descripción",
+    "noDescription": "Sin descripción disponible",
+    "includedServices": "Servicios Incluidos",
+    "mapLocation": "Ubicación en el Mapa",
+    "contact": {
+      "header": "¿Te interesa?",
+      "subHeader": "Solicita más información",
+      "ownerProperty": "Esta es tu propiedad",
+      "editProperty": "Editar Propiedad",
+      "deleteProperty": "Eliminar Propiedad",
+      "requestVisit": "Solicitar Visita",
+      "login": "Iniciar Sesión",
+      "loginRequired": "Debes iniciar sesión para solicitar una visita. ¿Deseas ir a iniciar sesión?",
+      "notAvailable": "No Disponible",
+      "notAvailableDesc": "Esta propiedad no está disponible",
+      "contactAgent": "Contactar Agente",
+      "agentContact": "Función de contacto - Implementar con WhatsApp, Email, etc.",
+      "save": "Guardar",
+      "saved": "Guardado",
+      "share": "Compartir",
+      "shareText": "Mira esta propiedad: {title}",
+      "linkCopied": "¡Enlace copiado al portapapeles!",
+      "deleteConfirm": "¿Estás seguro que deseas eliminar esta propiedad? Esta acción no se puede deshacer.",
+      "deleteFinalConfirm": "Esta es tu última oportunidad. ¿Realmente deseas eliminar esta propiedad permanentemente?",
+      "deleteSuccess": "¡Propiedad eliminada exitosamente!",
+      "deleteError": "Error al eliminar la propiedad.",
+      "deleteNoPermission": "No tienes permisos para eliminar esta propiedad.",
+      "deleteNotFound": "La propiedad no fue encontrada."
+    },
+    "meta": {
+      "published": "Publicado",
+      "views": "visitas",
+      "id": "ID"
+    },
+    "askPrice": "Consultar precio",
+    "create": {
+      "eyebrow": "Portafolio de Propiedades",
+      "title": "Publicar Propiedad",
+      "subtitle": "Completa los datos y agrega fotos para atraer más arrendatarios",
+      "success": "¡Propiedad creada exitosamente!",
+      "successTitle": "Éxito",
+      "successMessage": "La propiedad ha sido publicada correctamente",
+      "errorTitle": "Error",
+      "errorMessage": "Hubo un error al crear la propiedad. Por favor, intenta nuevamente",
+      "confirmCancel": "¿Estás seguro de que deseas cancelar? Se perderán todos los datos ingresados.",
+      "cancelTitle": "Cancelar creación",
+      "publishing": "Publicando...",
+      "processing": "Procesando...",
+      "publish": "Publicar Propiedad",
+      "continueLocation": "Continuar a Ubicación →",
+      "basicInfo": "Información Básica",
+      "basicInfoDesc": "Nombre, descripción y estado de la propiedad",
+      "location": "Ubicación",
+      "locationDesc": "Dirección y ciudad donde se encuentra",
+      "locationHint": "Las coordenadas ayudan a mostrar la propiedad en el mapa",
+      "locationExactHint": "Podrás seleccionar la ubicación exacta en el mapa en el siguiente paso",
+      "features": "Características",
+      "featuresDesc": "Precio, área y distribución de espacios",
+      "services": "Servicios Incluidos",
+      "servicesDesc": "Selecciona los servicios incluidos en el arriendo",
+      "servicesHint": "Separa cada servicio con comas (ej: WiFi, Gas, Agua, Luz)",
+      "serviceSelected": "servicio seleccionado",
+      "servicesSelected": "servicios seleccionados",
+      "clearSelection": "Limpiar selección",
+      "noServices": "No se han agregado servicios aún",
+      "noServicesSelected": "Ningún servicio seleccionado — opcional",
+      "imagesTitle": "Imágenes de la Propiedad",
+      "imagesDesc": "Sube hasta 10 imágenes JPG, PNG o WEBP (máx. 2 MB c/u)",
+      "dropzoneTitle": "Arrastra imágenes aquí o haz clic para seleccionar",
+      "dropzoneDesc": "JPG · PNG · WEBP · máx. 2 MB · {current}/10 imágenes",
+      "mainImage": "Principal",
+      "setAsMain": "Establecer como principal",
+      "deleteImage": "Eliminar imagen",
+      "noImagesTitle": "No hay imágenes",
+      "noImagesDesc": "Agrega fotos para que tu propiedad sea más atractiva",
+      "image": "Imagen",
+      "imagePreview": "Vista previa de la imagen",
+      "errors": {
+        "maxImages": "Máximo 10 imágenes permitidas",
+        "limitReached": "Límite alcanzado",
+        "invalidFormat": "Formato no válido",
+        "maxSize": "Máximo 2MB",
+        "incompleteFields": "Por favor completa todos los campos requeridos",
+        "incompleteTitle": "Campos incompletos",
+        "priceRequired": "Por favor ingresa el precio mensual",
+        "priceTitle": "Precio requerido",
+        "imageRequired": "Por favor agrega al menos una imagen",
+        "imageTitle": "Imagen requerida"
+      }
+    },
+    "fields": {
+      "title": "Título",
+      "description": "Descripción",
+      "address": "Dirección",
+      "city": "Ciudad",
+      "status": "Estado",
+      "publicationDate": "Fecha de Publicación",
+      "monthlyPrice": "Precio Mensual",
+      "area": "Área",
+      "bedrooms": "Habitaciones",
+      "bathrooms": "Baños",
+      "services": "Servicios",
+      "imageUrl": "URL de la Imagen",
+      "latitude": "Latitud",
+      "longitude": "Longitud"
+    },
+    "placeholders": {
+      "title": "Ej: Apartamento moderno en el centro",
+      "description": "Describe las características principales de la propiedad...",
+      "address": "Ej: Calle 10 #15-20",
+      "city": "Ej: Popayán",
+      "price": "0.00",
+      "area": "Ej: 85.5",
+      "bedrooms": "0",
+      "bathrooms": "0",
+      "services": "WiFi, Gas, Agua, Luz, Parqueadero",
+      "imageUrl": "https://ejemplo.com/imagen.jpg"
+    },
+    "loading": {
+      "title": "Cargando propiedades...",
+      "message": "Estamos obteniendo los inmuebles disponibles. Solo tomará un momento."
+    },
+    "error": {
+      "title": "Algo salió mal",
+      "offline": "Sin conexión a internet. Verifica tu red e intenta de nuevo.",
+      "server": "Nuestro servidor está presentando problemas. Intenta de nuevo en unos minutos.",
+      "notFound": "No se encontró el recurso de propiedades. Contacta soporte si el problema persiste.",
+      "generic": "Ocurrió un error inesperado al cargar las propiedades. Por favor intenta de nuevo.",
+      "retryButton": "Intentar de nuevo"
+    },
+    "empty": {
+      "titleFiltered": "Sin resultados",
+      "messageFiltered": "Ninguna propiedad coincide con los filtros actuales. Ajusta o limpia los filtros."
+    }
+  },
+  "time": {
+    "today": "hoy",
+    "yesterday": "ayer",
+    "daysAgo": "{0} días atrás",
+    "weeksAgo": "{0} semanas atrás",
+    "monthsAgo": "{0} meses atrás",
+    "yearsAgo": "{0} años atrás"
+  },
+  "footer": {
+    "about": {
+      "title": "Sobre Nosotros",
+      "description": "Somos una plataforma dedicada a ayudarle a encontrar la casa ideal según tu estilo de vida."
+    },
+    "quickLinks": {
+      "title": "Enlaces Rápidos",
+      "whoWeAre": "Quiénes Somos",
+      "properties": "Propiedades",
+      "contact": "Contacto",
+      "faq": "Preguntas Frecuentes"
+    },
+    "contact": {
+      "title": "Contacto",
+      "email": "support@rentusco.com",
+      "phone": "+57 3104939012",
+      "address": "Cl. 4 #2-80, Centro, Popayán, Cauca"
+    },
+    "social": {
+      "title": "Síguenos"
+    },
+    "bottom": {
+      "rights": "© 2025 RentUs. Todos los derechos reservados",
+      "legal": "Aviso Legal",
+      "privacy": "Política de Privacidad"
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Encuentra respuestas rápidas a las dudas más comunes sobre RentUs",
+    "cta": {
+      "text": "¿No encontraste tu respuesta?",
+      "button": "Hablar con soporte"
+    },
+    "empty": {
+      "title": "No hay preguntas disponibles",
+      "description": "Estamos trabajando para agregar contenido aquí pronto."
+    },
+    "questions": {
+      "q1": {
+        "question": "¿Cómo puedo publicar mi propiedad en RentUs?",
+        "answer": "Es muy sencillo. Regístrate como propietario, ve a tu panel y selecciona 'Publicar Propiedad'. Completa los datos básicos, sube fotos de alta calidad y ¡listo! Nuestro equipo revisará la información para activarla."
+      },
+      "q2": {
+        "question": "¿Qué métodos de pago puedo utilizar?",
+        "answer": "Aceptamos tarjetas de crédito y débito (Visa, Mastercard, American Express). También puedes vincular tu cuenta bancaria para pagos recurrentes automáticos a través de nuestra plataforma segura."
+      },
+      "q3": {
+        "question": "¿Cómo funcionan los contratos digitales?",
+        "answer": "Todos nuestros contratos tienen validez legal y se firman electrónicamente. Una vez que ambas partes aceptan los términos, el sistema genera un PDF certificado que puedes descargar en cualquier momento desde tu sección de 'Contratos'."
+      },
+      "q4": {
+        "question": "¿Cómo reporto un problema técnico en la propiedad?",
+        "answer": "Si eres inquilino, dirígete a la sección de 'Mantenimiento' en tu menú de usuario. Allí podrás crear un reporte detallado con fotos, el cual llegará directamente al propietario o administrador para su gestión."
+      },
+      "q5": {
+        "question": "¿Es seguro compartir mis datos personales?",
+        "answer": "Absolutamente. En RentUs utilizamos encriptación de grado bancario (SSL) para proteger toda tu información sensible. Nunca compartimos tus datos con terceros sin tu consentimiento explícito."
+      },
+      "q6": {
+        "question": "¿Puedo cancelar mi contrato antes de tiempo?",
+        "answer": "La cancelación anticipada depende de las cláusulas específicas pactadas en tu contrato digital. Te recomendamos revisar la sección de 'Terminación' en tu contrato actual o contactar directamente al propietario."
+      }
+    }
+  },
+  "properties": {
+    "hero": {
+      "title": {
+        "line1": "Descubre Tu",
+        "line2": "Próximo Hogar"
+      },
+      "description": "Explora nuestra colección exclusiva de propiedades diseñadas para tu estilo de vida",
+      "stats": {
+        "properties": "Propiedades",
+        "available": "Disponibles",
+        "cities": "Ciudades"
+      },
+      "scroll": "Explorar"
+    },
+    "section": {
+      "title": "Propiedades Disponibles",
+      "results": {
+        "single": "propiedad encontrada",
+        "multiple": "propiedades encontradas"
+      },
+      "addProperty": "Publicar Propiedad"
+    },
+    "card": {
+      "status": {
+        "available": "Disponible",
+        "rented": "Rentada",
+        "reserved": "Reservada",
+        "sold": "Vendida",
+        "maintenance": "Mantenimiento"
+      },
+      "priceLabel": "Precio Mensual",
+      "perMonth": "/mes",
+      "features": {
+        "area": "Área",
+        "bedrooms": "Habitaciones",
+        "bathrooms": "Baños"
+      },
+      "viewDetails": "Ver Detalles",
+      "edit": "Editar",
+      "delete": "Eliminar"
+    },
+    "empty": {
+      "title": "No se encontraron propiedades",
+      "message": "Intenta ajustar los filtros de búsqueda para encontrar más resultados",
+      "resetButton": "Reiniciar Búsqueda"
+    },
+    "delete": {
+      "confirm": "¿Eliminar esta propiedad permanentemente?",
+      "success": "Propiedad eliminada correctamente",
+      "error": "Error al eliminar la propiedad"
+    },
+    "errors": {
+      "loadUser": "Error cargando usuario",
+      "loadProperties": "Error cargando propiedades"
+    }
+  },
+  "carousel": {
+    "featured": "Propiedad Destacada",
+    "viewDetails": "Ver Detalles",
+    "askPrice": "Consultar precio",
+    "squareMeters": "m²",
+    "bedrooms": "Hab.|Hab.",
+    "bathrooms": "Baño|Baños",
+    "parking": "Parqueo|Parqueos"
+  },
+  "profile": {
+    "addLocation": "Agregar ubicación",
+    "bio": "Biografía",
+    "addBio": "Agregar biografía",
+    "bioPlaceholder": "Cuéntanos sobre ti...",
+    "stats": {
+      "properties": "Propiedades",
+      "rating": "Rating",
+      "reviews": "Reseñas"
+    },
+    "contact": {
+      "email": "Email",
+      "phone": "Teléfono",
+      "memberSince": "Miembro desde",
+      "notRegistered": "No registrado"
+    },
+    "properties": {
+      "title": "Mis Propiedades",
+      "new": "Nueva",
+      "empty": {
+        "title": "No tienes propiedades",
+        "description": "Comienza agregando tu primera propiedad",
+        "add": "Agregar Propiedad"
+      }
+    },
+    "locationModal": {
+      "title": "Ubicación",
+      "department": "Departamento",
+      "city": "Ciudad",
+      "selectDepartment": "Selecciona un departamento",
+      "selectCity": "Selecciona una ciudad"
+    }
+  },
+  "contracts": {
+    "title": "Mis Contratos",
+    "loading": "Cargando contratos...",
+    "searchButton": "Buscar contrato",
+    "searchPlaceholder": "Buscar por ID o dirección...",
+    "noResults": "No se encontraron contratos",
+    "new": "Nuevo",
+    "actionRequired": "Acción requerida",
+    "status": "Estado",
+    "review": "Revisar",
+    "preview": "Vista previa",
+    "page": "Página",
+    "active": "Activos",
+    "total": "Total",
+    "pending": "Pendientes",
+    "empty": "No tienes contratos aún",
+    "previewLoading": "Generando vista previa del contrato...",
+    "previewUnavailable": "Vista previa no disponible",
+    "downloadPdf": "Descargar PDF",
+    "share": "Compartir",
+    "details": "Detalles del Contrato",
+    "property": "Propiedad",
+    "tenant": "Inquilino",
+    "landlord": "Arrendador",
+    "monthlyValue": "Valor Mensual",
+    "deposit": "Depósito",
+    "duration": "Duración",
+    "startDate": "Fecha Inicio",
+    "endDate": "Fecha Fin",
+    "reviewContract": "Revisar Contrato",
+    "loadingContract": "Cargando contrato...",
+    "summary": "Resumen del Contrato",
+    "importantClauses": "Cláusulas importantes:",
+    "acceptTerms": "He leído y acepto los términos del contrato",
+    "accept": "Aceptar Contrato",
+    "accepting": "Aceptando...",
+    "reject": "Rechazar Contrato",
+    "statusActive": "Activo",
+    "statusInactive": "Inactivo",
+    "statusExpired": "Expirado",
+    "statusPending": "Pendiente",
+    "statusRejected": "Rechazado",
+    "statusUnknown": "Desconocido"
+  },
+  "notifications": {
+    "title": "Notificaciones",
+    "markAll": "Marcar todas como leídas",
+    "loading": "Cargando notificaciones...",
+    "empty": {
+      "title": "Sin notificaciones",
+      "description": "Cuando recibas notificaciones aparecerán aquí"
+    },
+    "dates": {
+      "today": "Hoy",
+      "yesterday": "Ayer"
+    }
+  },
+  "payments": {
+    "eyebrow": "Mis Contratos",
+    "title": "Historial de Pagos",
+    "subtitle": "Pagos realizados en tus contratos de arrendamiento activos",
+    "actions": {
+      "payNow": "Realizar Pago",
+      "manageMethods": "Gestionar Tarjetas"
+    },
+    "counters": {
+      "records": "Registros",
+      "pending": "Pendientes"
+    },
+    "searchPlaceholder": "Buscar por ID de contrato o monto...",
+    "filters": {
+      "all": "Todos los estados",
+      "paid": "Pagados",
+      "pending": "Por pagar / Pendientes",
+      "failed": "Fallidos"
+    },
+    "states": {
+      "loading": "Cargando pagos...",
+      "empty": {
+        "title": "No se encontraron pagos",
+        "description": "Aún no tienes registros de pagos o tu búsqueda no arrojó resultados."
+      }
+    },
+    "table": {
+      "headers": {
+        "id": "ID",
+        "date": "Fecha",
+        "amount": "Monto",
+        "status": "Estado",
+        "type": "Tipo",
+        "contract": "Contrato",
+        "property": "Propiedad"
+      },
+      "contractId": "Contrato #"
+    },
+    "badges": {
+      "new": "NUEVO"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "paid": "Pagado",
+      "failed": "Fallido",
+      "refunded": "Reembolsado",
+      "unpaid": "POR PAGAR",
+      "completed": "Completado"
+    },
+    "type": {
+      "rental": "Alquiler",
+      "deposit": "Depósito",
+      "fee": "Tarifa",
+      "maintenance": "Mantenimiento"
+    },
+    "pagination": {
+      "prev": "Anterior",
+      "next": "Siguiente",
+      "info": "Página {page} de {total}"
+    },
+    "modals": {
+      "detail": {
+        "title": "Detalle del Pago",
+        "transactionId": "ID Transacción:",
+        "amount": "Monto Total",
+        "download": "Descargar Comprobante PDF",
+        "status": "Estado",
+        "date": "Fecha",
+        "type": "Tipo",
+        "reference": "Referencia",
+        "method": "Método de Pago",
+        "cardEnding": "Tarjeta terminada en **** {lastFour}"
+      },
+      "methods": {
+        "title": "Mis Tarjetas",
+        "subtitle": "Gestiona tus métodos de pago guardados",
+        "empty": "No tienes tarjetas guardadas",
+        "newCard": "Nueva Tarjeta",
+        "expiring": "Expira: {date}",
+        "vence": "Vence {date}"
+      },
+      "payment": {
+        "title": "Realizar Pago",
+        "amountToPay": "Monto a pagar",
+        "savedCard": "Tarjeta Guardada",
+        "newCard": "Nueva Tarjeta",
+        "holderName": "Nombre del Titular",
+        "holderPlaceholder": "Como aparece en la tarjeta",
+        "cardNumber": "Número de Tarjeta",
+        "cardPlaceholder": "0000 0000 0000 0000",
+        "expiryDate": "Fecha Expiración",
+        "expiryPlaceholder": "MM/YY",
+        "cvv": "CVV",
+        "cvvPlaceholder": "***",
+        "saveCard": "Guardar tarjeta para futuros pagos",
+        "confirm": "Confirmar Pago {amount}",
+        "cancel": "Cancelar"
+      },
+      "success": {
+        "title": "¡Pago Exitoso!",
+        "description": "Tu pago ha sido procesado correctamente y el contrato ahora está activo.",
+        "done": "Entendido"
+      },
+      "receipt": {
+        "labels": {
+          "id": "ID Pago:",
+          "date": "Fecha:",
+          "amount": "Monto:",
+          "contract": "Contrato:",
+          "card": "Tarjeta:",
+          "status": "Estado:"
+        }
+      }
+    },
+    "alerts": {
+      "fetchError": "No se pudieron cargar los pagos. Intenta de nuevo.",
+      "methodsError": "Error al cargar los métodos de pago.",
+      "deleteMethodConfirm": "¿Estás seguro de que deseas eliminar esta tarjeta?",
+      "deleteMethodSuccess": "Tarjeta eliminada correctamente",
+      "deleteMethodError": "Error al eliminar el método de pago.",
+      "cardSaved": "Tarjeta guardada correctamente",
+      "validation": {
+        "holder": "El nombre del titular es requerido",
+        "card": "Número de tarjeta inválido",
+        "cvv": "CVV inválido",
+        "expiry": "Fecha de expiración inválida (MM/YY)",
+        "savedCard": "Selecciona una tarjeta guardada"
+      },
+      "paymentSuccess": "Pago procesado con éxito. Tu contrato ahora está ACTIVO.",
+      "pdfSuccess": "Comprobante generado"
+    }
+  },
+  "maintenance": {
+    "eyebrow": "Gestión Operativa",
+    "title": "Solicitudes de Mantenimiento",
+    "subtitle": "Supervisa y gestiona cada reporte activo de tu portafolio",
+    "counters": {
+      "results": "Resultados",
+      "pending": "Pendientes"
+    },
+    "actions": {
+      "new": "Nueva Solicitud",
+      "create": "Generar Reporte"
+    },
+    "tabs": {
+      "all": "Todos",
+      "pending": "Pendiente",
+      "in_progress": "En Progreso",
+      "completed": "Completado",
+      "cancelled": "Cancelado"
+    },
+    "searchPlaceholder": "Buscar por título, propiedad...",
+    "filters": {
+      "priorityAll": "Todas las prioridades"
+    },
+    "states": {
+      "loading": "Cargando solicitudes...",
+      "empty": {
+        "title": "Sin solicitudes de mantenimiento",
+        "description": "No hay reportes que coincidan con los filtros. Crea una nueva solicitud para empezar."
+      }
+    },
+    "table": {
+      "headers": {
+        "id": "ID",
+        "date": "Fecha",
+        "property": "Propiedad",
+        "title": "Título",
+        "priority": "Prioridad",
+        "status": "Estado"
+      }
+    },
+    "priority": {
+      "low": "Baja",
+      "medium": "Media",
+      "high": "Alta",
+      "emergency": "Emergencia",
+      "urgent": "Urgente"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "in_progress": "En Progreso",
+      "completed": "Completado",
+      "cancelled": "Cancelado"
+    },
+    "modals": {
+      "create": {
+        "title": "Solicitud de Mantenimiento",
+        "fields": {
+          "property": "Propiedad / Inmueble:",
+          "selectProperty": "Seleccione una propiedad",
+          "title": "Asunto de Mantenimiento:",
+          "titlePlaceholder": "Ej: Fuga de agua en el baño principal",
+          "priority": "Prioridad:",
+          "description": "Descripción del problema:",
+          "descriptionPlaceholder": "Describe detalladamente el problema, ubicación exacta y cualquier información relevante...",
+          "attachImage": "Adjuntar imagen del problema (opcional)",
+          "uploading": "Subiendo: {progress}%",
+          "uploadSuccess": "Imagen subida correctamente",
+          "viewImage": "Ver imagen"
+        },
+        "actions": {
+          "uploading": "Subiendo imagen...",
+          "sending": "Enviando solicitud...",
+          "send": "Enviar Solicitud"
+        }
+      }
+    },
+    "alerts": {
+      "fetchError": "No se pudieron cargar las solicitudes. Intenta de nuevo.",
+      "submitSuccess": "Solicitud enviada correctamente",
+      "submitSuccessFull": "¡Solicitud de mantenimiento enviada correctamente! Te contactaremos pronto.",
+      "validationTitle": "Por favor ingresa un título para el asunto",
+      "validationProperty": "Por favor selecciona una propiedad afectada",
+      "validationDescription": "Por favor describe el problema",
+      "validationLength": "La descripción no puede exceder los 500 caracteres",
+      "imageType": "Por favor, selecciona solo imágenes (JPEG, PNG, GIF)",
+      "imageSize": "La imagen no debe superar los 10MB",
+      "imageError": "No se pudo subir la imagen. Intenta nuevamente.",
+      "confirmDelete": "¿Estás seguro de que deseas eliminar esta tarjeta?"
+    }
+  },
+  "reports": {
+    "eyebrow": "Soporte & Comunidad",
+    "title": "Mis Reportes y Quejas",
+    "subtitle": "Realiza y haz seguimiento a tus reclamos sobre usuarios o propiedades",
+    "actions": {
+      "new": "Nuevo Reporte",
+      "create": "Crear Reporte",
+      "cancel": "Cancelar",
+      "send": "Enviar Reporte"
+    },
+    "searchPlaceholder": "Buscar por detalle...",
+    "filters": {
+      "all": "Todos los estados"
+    },
+    "states": {
+      "loading": "Cargando reportes...",
+      "empty": {
+        "title": "No has generado ningún reporte",
+        "description": "Si tuviste algún inconveniente en la plataforma, puedes crear un reporte aquí."
+      }
+    },
+    "table": {
+      "headers": {
+        "id": "ID",
+        "date": "Fecha",
+        "type": "Tipo",
+        "detail": "Detalle",
+        "status": "Estado"
+      }
+    },
+    "status": {
+      "pending": "Pendiente",
+      "reviewed": "En Revisión",
+      "resolved": "Resuelto",
+      "dismissed": "Desestimado"
+    },
+    "type": {
+      "property": "Propiedad",
+      "user": "Usuario",
+      "review": "Reseña",
+      "other": "Otro"
+    },
+    "pagination": {
+      "prev": "Anterior",
+      "next": "Siguiente",
+      "info": "Página {page} de {total}"
+    },
+    "modals": {
+      "create": {
+        "eyebrow": "Nuevo registro",
+        "title": "Crear Reporte",
+        "fields": {
+          "type": "Tipo de Reporte",
+          "propertyId": "ID de la Propiedad",
+          "propertyIdPlaceholder": "Ej: 123",
+          "userId": "ID del Usuario",
+          "userIdPlaceholder": "Ej: 42",
+          "optional": "(Opcional)",
+          "description": "Detalle de lo ocurrido",
+          "descriptionPlaceholder": "Por favor, sé lo más específico posible...",
+          "charCount": "caracteres"
+        }
+      }
+    },
+    "alerts": {
+      "fetchError": "No se pudieron cargar tus reportes.",
+      "submitSuccess": "Tu reporte ha sido enviado. Será revisado por un administrador.",
+      "submitError": "No pudimos enviar tu reporte. Intenta más tarde."
+    }
+  },
+  "requests": {
+    "title": "Solicitudes de Arriendo",
+    "subtitle": "Revisa y gestiona solicitudes pendientes",
+    "loading": "Cargando solicitudes...",
+    "property": {
+      "requestedDate": "Fecha solicitada",
+      "proposedDate": "Fecha propuesta (esperando respuesta)"
+    },
+    "rating": {
+      "none": "Sin calificación",
+      "na": "N/A"
+    },
+    "actions": {
+      "review": "Revisar",
+      "reject": "Rechazar",
+      "continue": "Seguir proceso",
+      "finish": "Finalizar proceso",
+      "accept": "Aceptar solicitud",
+      "cancelProposal": "Cancelar propuesta",
+      "proposeDate": "Proponer otra fecha",
+      "sendProposal": "Enviar propuesta",
+      "cancel": "Cancelar",
+      "sendContract": "Enviar contrato"
+    },
+    "status": {
+      "pending": "Pendiente",
+      "accepted": "Aceptada",
+      "rejected": "Rechazada",
+      "counterProposed": "Contra-propuesta enviada",
+      "visitCompleted": "Visita completada",
+      "contractSent": "Contrato enviado"
+    },
+    "messages": {
+      "visitScheduled": "Visita programada para {date} {time}",
+      "waitingTenant": "Esperando respuesta del inquilino...",
+      "requestRejected": "Solicitud rechazada",
+      "contractWaiting": "Contrato enviado - Esperando aceptación",
+      "visitCompleted": "Visita completada"
+    },
+    "empty": {
+      "title": "No hay solicitudes",
+      "description": "Las solicitudes de arriendo aparecerán aquí"
+    },
+    "reviewModal": {
+      "title": "Revisar Solicitud",
+      "requestedDate": "Fecha solicitada"
+    },
+    "counterForm": {
+      "title": "Proponer nueva fecha y hora",
+      "newDate": "Nueva fecha",
+      "newTime": "Nueva hora"
+    },
+    "contractModal": {
+      "title": "Enviar Términos del Contrato",
+      "period": "Período del contrato",
+      "startDate": "Fecha de inicio",
+      "endDate": "Fecha de finalización",
+      "financial": "Información financiera",
+      "monthlyPrice": "Precio mensual ($)",
+      "deposit": "Depósito/Garantía ($)",
+      "paymentDay": "Día de pago (1-31)",
+      "lateFee": "Multa por retraso ($)",
+      "terms": "Servicios y términos",
+      "utilities": "Servicios incluidos",
+      "utilitiesHint": "Separados por coma",
+      "clauses": "Cláusulas del contrato",
+      "clausesHint": "Una por línea",
+      "specialConditions": "Condiciones especiales (opcional)",
+      "specialConditionsPlaceholder": "Condiciones adicionales..."
+    }
+  },
+  "myVisits": {
+    "title": "Mis Solicitudes de Visita",
+    "subtitle": "Seguimiento de tus citas programadas",
+    "loading": "Cargando solicitudes...",
+    "requestedDate": "Fecha solicitada",
+    "counterProposedByOwner": "Nueva fecha propuesta por el dueño",
+    "actions": {
+      "acceptNewDate": "Aceptar nueva fecha",
+      "viewContract": "Ver contrato",
+      "cancelRequest": "Cancelar solicitud",
+      "searchProperties": "Buscar propiedades"
+    },
+    "messages": {
+      "visitConfirmed": "Visita confirmada. El dueño te contactará pronto.",
+      "requestRejected": "Solicitud rechazada por el dueño",
+      "waitingOwner": "Esperando respuesta del dueño..."
+    },
+    "empty": {
+      "title": "No tienes solicitudes",
+      "description": "Aún no has solicitado visitas a propiedades"
+    }
+  },
+  "visitRequest": {
+    "title": "Solicitar Cita de Visita",
+    "form": {
+      "date": "Fecha de la visita",
+      "time": "Hora de la visita"
+    },
+    "info": "El dueño recibirá tu solicitud y podrá aceptarla o proponer otra fecha/hora.",
+    "actions": {
+      "send": "Enviar Solicitud",
+      "sending": "Enviando..."
+    },
+    "success": "¡Solicitud enviada exitosamente!",
+    "errors": {
+      "generic": "Ocurrió un error inesperado",
+      "sendRequest": "Error al enviar la solicitud"
+    }
+  },
+  "alerts": {
+    "confirm": "Confirmar",
+    "cancel": "Cancelar",
+    "close": "Cerrar alerta"
+  },
+  "languages": {
+    "es": "🇪🇸 Español",
+    "en": "🇺🇸 English",
+    "fr": "🇫🇷 Français",
+    "de": "🇩🇪 Deutsch"
+  },
+  "timezones": {
+    "bogota": "Colombia (GMT-5)",
+    "madrid": "España (GMT+1)",
+    "london": "Reino Unido (GMT+0)",
+    "newYork": "EE.UU. Este (GMT-5)",
+    "losAngeles": "EE.UU. Oeste (GMT-8)"
+  },
+  "settings": {
+    "language": "Idioma",
+    "timezone": "Zona horaria",
+    "units": "Unidades",
+    "unitsMetric": "Métrico (km, m²)",
+    "unitsImperial": "Imperial (mi, ft²)",
+    "sections": {
+      "profile": "Perfil",
+      "security": "Seguridad",
+      "notifications": "Notificaciones",
+      "preferences": "Preferencias"
+    },
+    "profile": {
+      "title": "Perfil",
+      "avatar": "Avatar del usuario",
+      "changeAvatar": "Cambiar foto",
+      "avatarHint": "Formatos permitidos: JPG, PNG, GIF o WEBP. Máx 5MB.",
+      "fullName": "Nombre completo",
+      "namePlaceholder": "Ingresa tu nombre",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "Correo electrónico",
+      "emailNote": "El correo no se puede modificar",
+      "phone": "Teléfono",
+      "phonePlaceholder": "Ingresa tu teléfono",
+      "document": "Documento",
+      "documentPlaceholder": "Número de documento",
+      "bio": "Biografía",
+      "bioPlaceholder": "Cuéntanos un poco sobre ti",
+      "department": "Departamento",
+      "selectDepartment": "Selecciona un departamento",
+      "city": "Ciudad",
+      "selectCity": "Selecciona una ciudad"
+    },
+    "security": {
+      "title": "Seguridad",
+      "currentPassword": "Contraseña actual",
+      "currentPlaceholder": "Ingresa tu contraseña actual",
+      "newPassword": "Nueva contraseña",
+      "newPlaceholder": "Ingresa la nueva contraseña",
+      "confirmPassword": "Confirmar contraseña",
+      "confirmPlaceholder": "Confirma la contraseña",
+      "updatePassword": "Actualizar contraseña",
+      "requirementsTitle": "La contraseña debe contener:",
+      "minLength": "Al menos 8 caracteres",
+      "upperLower": "Mayúsculas y minúsculas",
+      "number": "Al menos un número",
+      "specialChar": "Un carácter especial",
+      "match": "Las contraseñas deben coincidir"
+    },
+    "notifications": {
+      "title": "Notificaciones"
+    },
+    "preferences": {
+      "title": "Preferencias",
+      "theme": "Tema",
+      "save": "Guardar preferencias"
+    },
+    "themes": {
+      "light": "Claro",
+      "dark": "Oscuro",
+      "auto": "Automático"
+    }
+  },
+  "passwordStrength": {
+    "veryWeak": "Muy débil",
+    "weak": "Débil",
+    "medium": "Media",
+    "strong": "Fuerte"
+  },
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "select": "Selecciona",
+    "month": "mes",
+    "close": "Cerrar",
+    "reject": "Rechazar",
+    "saveChanges": "Guardar cambios",
+    "saving": "Guardando...",
+    "updating": "Actualizando...",
+    "reset": "Restablecer",
+    "savePreferences": "Guardar preferencias",
+    "logout": "Cerrar sesión",
+    "yes": "Sí",
+    "no": "No",
+    "validation": "Validación",
+    "success": "Éxito",
+    "backToHome": "Volver al inicio"
+  },
+  "legal": {
+    "lastUpdated": "Última actualización: {date}",
+    "notice": {
+      "eyebrow": "Legal",
+      "title": "Aviso Legal",
+      "sections": {
+        "identification": {
+          "title": "1. Identificación del Aplicativo",
+          "content": "<p>RENTUS es una plataforma digital de Software as a Service (SaaS) diseñada para la gestión integral de activos inmobiliarios, facilitando la conexión y comunicación entre propietarios, arrendadores e inquilinos.</p><p>El uso de este aplicativo implica la aceptación plena de los términos aquí descritos.</p>"
+        },
+        "usage": {
+          "title": "2. Condiciones de Uso",
+          "content": "<p>El usuario se compromete a hacer un uso lícito, diligente y correcto de la plataforma. Queda prohibido:</p><ul><li>Utilizar el sistema para fines fraudulentos o ilícitos.</li><li>Suplantar la identidad de otros usuarios o proporcionar información falsa sobre propiedades.</li><li>Interferir con el funcionamiento técnico de los servidores de RENTUS.</li></ul>"
+        },
+        "responsibilities": {
+          "title": "3. Responsabilidades del Usuario",
+          "content": "<p><strong>Propietarios/Arrendadores:</strong> Son responsables de la veracidad de la información de las propiedades publicadas y de poseer los derechos legales para su comercialización.</p><p><strong>Inquilinos:</strong> Son responsables de la veracidad de su información personal y financiera proporcionada para la postulación a arriendos.</p>"
+        },
+        "liability": {
+          "title": "4. Limitaciones de Responsabilidad",
+          "content": "<p>RENTUS actúa como un facilitador tecnológico. No somos parte de la relación contractual final entre arrendador e inquilino, ni nos responsabilizamos por:</p><ul><li>Incumplimientos en los pagos por parte de los inquilinos.</li><li>Daños físicos en las propiedades.</li><li>Disponibilidad 100% ininterrumpida del servicio (aunque trabajamos para garantizar el 99.9%).</li></ul>"
+        },
+        "intellectual": {
+          "title": "5. Propiedad Intelectual",
+          "content": "<p>El software, diseño, logotipos, textos y arquitectura de RENTUS son propiedad exclusiva de sus desarrolladores originales. Queda prohibida la reproducción total o parcial sin autorización expresa por escrito.</p>"
+        },
+        "termination": {
+          "title": "6. Suspensión y Cancelación",
+          "content": "<p>RENTUS se reserva el derecho de suspender o cancelar cuentas de usuarios que infrinjan estos términos, realicen spam o utilicen la plataforma para actividades sospechosas de fraude.</p>"
+        }
+      }
+    },
+    "privacy": {
+      "eyebrow": "Privacidad",
+      "title": "Política de Privacidad",
+      "sections": {
+        "responsible": {
+          "title": "1. Responsable del Tratamiento",
+          "content": "<p>RENTUS es el responsable del tratamiento de los datos personales recopilados a través de esta plataforma, garantizando el cumplimiento de la Ley 1581 de 2012 de Protección de Datos Personales en Colombia.</p>"
+        },
+        "dataCollected": {
+          "title": "2. Datos Recopilados",
+          "content": "<p>Recopilamos la siguiente información necesaria para la gestión inmobiliaria:</p><ul><li><strong>Datos Personales:</strong> Nombre, documento de identidad, correo electrónico, teléfono.</li><li><strong>Datos de Propiedad:</strong> Dirección, fotos, certificado de tradición, servicios.</li><li><strong>Datos Financieros:</strong> Historial de pagos y métodos de pago (procesados a través de pasarelas seguras).</li></ul>"
+        },
+        "purpose": {
+          "title": "3. Finalidad del Tratamiento",
+          "content": "<p>Sus datos son utilizados exclusivamente para:</p><ul><li>Gestionar contratos de arrendamiento digitales.</li><li>Procesar cobros y pagos de canon de arrendamiento.</li><li>Facilitar la comunicación técnica y administrativa entre las partes.</li><li>Generar reportes estadísticos de mantenimiento y finanzas.</li></ul>"
+        },
+        "security": {
+          "title": "4. Almacenamiento y Seguridad",
+          "content": "<p>La información se almacena en infraestructuras de nube de alta seguridad con encriptación SSL de 256 bits y copias de seguridad diarias para garantizar la integridad de sus activos sensibles.</p>"
+        },
+        "providers": {
+          "title": "5. Proveedores Externos",
+          "content": "<p>RENTUS utiliza servicios de terceros de confianza (por ejemplo, pasarelas de pago y servicios de almacenamiento en la nube) para operar. Estos proveedores solo tienen acceso a la información mínima necesaria y cumplen con altos estándares de seguridad.</p>"
+        },
+        "rights": {
+          "title": "6. Derechos del Usuario",
+          "content": "<p>Usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos personales en cualquier momento a través de la sección de Ajustes o contactando a nuestro equipo de soporte.</p>"
+        },
+        "retention": {
+          "title": "7. Conservación de Datos",
+          "content": "<p>Conservaremos sus datos mientras mantenga una cuenta activa o durante el tiempo que exijan las leyes fiscales y comerciales aplicables para la validez de contratos firmados.</p>"
+        }
+      }
+    }
+  }
+}
