@@ -147,7 +147,7 @@
           <div v-for="property in userProperties" :key="property.id" class="property-card"
             @click="viewPropertyDetails(property.id)">
             <div class="property-image">
-              <img :src="property.image_url || defaultPropertyImage" :alt="property.title"
+              <img :src="getPropertyImage(property)" :alt="property.title"
                 @error="handlePropertyImageError" />
               <div class="property-status" :class="`status-${property.status}`">
                 {{ friendlyStatus(property.status) }}
@@ -285,6 +285,7 @@ import api from '../../services/api'
 import { eventBus, EVENTS } from '../../events/eventBus'
 import { useAlerts } from '../../composables/useAlerts'
 import { useI18n } from "vue-i18n";
+import { getPropertyImage } from '../../utils/propertyUtils';
 
 const { t } = useI18n();
 
