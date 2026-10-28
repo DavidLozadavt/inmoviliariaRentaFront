@@ -1751,3 +1751,200 @@
 .language-toggle.loading .toggle-slider {
   animation: loading-pulse 1s ease-in-out infinite;
 }
+
+/* ============================================================
+   REDISEÑO 2026-10 (escritorio): barra más limpia y alineada
+   - Contenido alineado al ancho de la página (1200px)
+   - Enlaces sin bloque naranja: el activo va en dorado con una línea
+   - Idioma y "Iniciar sesión" del mismo alto (40px)
+   ============================================================ */
+@media (min-width: 769px) {
+  /* Alto 65px: varias páginas compensan exactamente esa altura */
+  header.property-header {
+    height: 65px;
+    padding: 0 max(1.8rem, calc((100% - 1200px) / 2));
+    background:
+      radial-gradient(120% 140% at 0% 0%, rgba(183, 21, 64, 0.16), transparent 45%),
+      linear-gradient(180deg, #2f1d16 0%, #24160f 100%);
+    border-bottom: 1px solid rgba(218, 156, 95, 0.16);
+    box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.55);
+  }
+
+  header.property-header .logo {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  header.property-header .logo:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+
+  /* Enlaces */
+  header.property-header .nav-links {
+    gap: 0.25rem;
+    background: transparent;
+    padding: 0;
+    backdrop-filter: none;
+  }
+
+  header.property-header .nav-link {
+    height: 40px;
+    padding: 0 1rem;
+    border-radius: 10px;
+    color: rgba(240, 229, 219, 0.72);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    overflow: visible;
+  }
+
+  header.property-header .nav-link::before {
+    display: none;
+  }
+
+  header.property-header .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 2px;
+    height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #da9c5f, #f0c48a);
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+  }
+
+  header.property-header .nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.06);
+    transform: none;
+  }
+
+  header.property-header .nav-link.active {
+    color: #f0c48a;
+    background: rgba(218, 156, 95, 0.1);
+    box-shadow: none;
+  }
+
+  header.property-header .nav-link.active::after {
+    transform: scaleX(1);
+  }
+
+  header.property-header .nav-icon {
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
+
+  header.property-header .nav-text {
+    font-size: 0.9rem;
+  }
+
+  /* Derecha */
+  header.property-header .header-right {
+    gap: 0.75rem;
+  }
+
+  /* Idioma: interruptor compacto */
+  header.property-header .language-toggle,
+  header.property-header .language-toggle:hover,
+  header.property-header .language-toggle:active {
+    transform: none;
+    margin-right: 0;
+  }
+
+  header.property-header .toggle-track,
+  header.property-header .language-toggle:hover .toggle-track {
+    height: 40px;
+    padding: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  header.property-header .toggle-track::before,
+  header.property-header .toggle-glow,
+  header.property-header .toggle-slider::before,
+  header.property-header .language-toggle:active::after {
+    display: none;
+  }
+
+  header.property-header .toggle-slider,
+  header.property-header .toggle-slider.active {
+    top: 4px;
+    height: calc(100% - 8px);
+    width: calc(50% - 4px);
+    background: rgba(218, 156, 95, 0.22);
+    border: 1px solid rgba(218, 156, 95, 0.45);
+    box-shadow: none;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  header.property-header .toggle-slider {
+    left: 4px;
+  }
+
+  header.property-header .toggle-slider.active {
+    left: 50%;
+  }
+
+  header.property-header .language-option {
+    min-width: 46px;
+    padding: 0 0.6rem;
+    height: 100%;
+  }
+
+  header.property-header .language-option:hover {
+    transform: none;
+  }
+
+  header.property-header .language-option .lang-code {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: rgba(240, 229, 219, 0.5);
+    text-shadow: none;
+    transform: none;
+  }
+
+  header.property-header .language-option.active .lang-code {
+    color: #f0c48a;
+    text-shadow: none;
+  }
+
+  /* Iniciar sesión */
+  header.property-header .login-btn {
+    height: 40px;
+    padding: 0 1.25rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #e3ab6c 0%, #c98a3d 100%);
+    color: #24160f;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    box-shadow: 0 6px 18px -8px rgba(218, 156, 95, 0.8);
+  }
+
+  header.property-header .login-btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+    box-shadow: 0 10px 22px -8px rgba(218, 156, 95, 0.9);
+  }
+
+  /* Usuario con sesión */
+  header.property-header .user-profile {
+    height: 44px;
+    padding: 0 0.6rem 0 0.3rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  header.property-header .user-profile:hover {
+    background: rgba(255, 255, 255, 0.09);
+  }
+
+  header.property-header .avatar-img {
+    width: 34px;
+    height: 34px;
+    box-shadow: none;
+  }
+}
