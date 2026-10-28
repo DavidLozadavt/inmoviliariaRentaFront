@@ -41,10 +41,13 @@ const colorTexto = computed(() => (props.tono === 'claro' ? '#ffffff' : '#1a1a1a
 </script>
 
 <style scoped>
+/* El alto lo pone quien lo usa con --alto-logo; el ancho sale de la proporción del logo. */
 .nexiliving-logo {
   display: block;
-  height: 100%;
+  height: var(--alto-logo, 40px);
   width: auto;
+  aspect-ratio: 518.13 / 131.99;
+  flex-shrink: 0;
   overflow: visible;
 }
 

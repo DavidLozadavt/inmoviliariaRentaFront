@@ -51,12 +51,12 @@
 
 /* Logo NexiLiving (componente NexiLivingLogo, texto blanco) */
 .logo-nexiliving {
-  height: 44px;
+  --alto-logo: 46px;
 }
 
 @media (max-width: 480px) {
   .logo-nexiliving {
-    height: 36px;
+    --alto-logo: 38px;
   }
 }
 

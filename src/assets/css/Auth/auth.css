@@ -123,13 +123,13 @@
 
 /* Logo NexiLiving (componente NexiLivingLogo, texto oscuro) */
 .brand-logo {
-  height: 80px;
+  --alto-logo: 80px;
   max-width: 100%;
 }
 
 @media (max-width: 480px) {
   .brand-logo {
-    height: 60px;
+    --alto-logo: 60px;
   }
 }
 
