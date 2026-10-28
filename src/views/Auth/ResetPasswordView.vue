@@ -8,10 +8,8 @@
       <!-- Brand Section -->
       <div class="brand-section">
         <div class="logo-wrapper">
-          <img src="/favicon-dark.png" alt="Logo NexiLiving" class="logo-icon" />
-          <h1 class="brand-name">
-            <span class="brand-rent">Nexi</span>
-            <span class="brand-us">Living</span>
+          <h1 class="brand-name brand-logo">
+            <NexiLivingLogo tono="oscuro" />
           </h1>
         </div>
       </div>
@@ -380,6 +378,7 @@
 </template>
 
 <script setup lang="ts">
+import NexiLivingLogo from "@/components/NexiLivingLogo.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
 import api from "../../services/api";

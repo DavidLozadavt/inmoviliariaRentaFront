@@ -131,17 +131,6 @@ app.use(router);
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');
 
-// ── Adaptive favicon (dark/light mode) ───────────────────────────────────
-function setFavicon() {
-  const link = document.querySelector<HTMLLinkElement>("link[rel='icon']");
-  if (!link) return;
-  const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  link.href = isDark ? '/favicon-light.png' : '/favicon-dark.png';
-}
-
-setFavicon();
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFavicon);
-
 // ── DEV navigation tracing ───────────────────────────────────────────────
 router.afterEach((to, from) => {
   logger.log(`Navigation: ${from.path} → ${to.path}`);

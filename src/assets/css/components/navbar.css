@@ -49,6 +49,17 @@
   color: #da9c5f;
 }
 
+/* Logo NexiLiving (componente NexiLivingLogo, texto blanco) */
+.logo-nexiliving {
+  height: 44px;
+}
+
+@media (max-width: 480px) {
+  .logo-nexiliving {
+    height: 36px;
+  }
+}
+
 /* ============================================================
    HAMBURGER MENU
    ============================================================ */

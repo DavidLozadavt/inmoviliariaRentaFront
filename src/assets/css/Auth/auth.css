@@ -121,6 +121,18 @@
   color: #4D2F24;
 }
 
+/* Logo NexiLiving (componente NexiLivingLogo, texto oscuro) */
+.brand-logo {
+  height: 80px;
+  max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .brand-logo {
+    height: 60px;
+  }
+}
+
 .dynamic-message {
   min-height: 160px;
 }

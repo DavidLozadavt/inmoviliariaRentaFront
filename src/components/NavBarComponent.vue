@@ -3,8 +3,7 @@
 
     <!-- Logo -->
     <div class="logo" @click="goHome" style="cursor: pointer">
-      <img src="/favicon-light.png" alt="Logo" />
-      <div class="logo-text"><strong>Nexi</strong><span>Living</span></div>
+      <NexiLivingLogo tono="claro" class="logo-nexiliving" />
     </div>
 
     <!-- Barra de navegación (Desktop) -->
@@ -168,8 +167,7 @@
       <div v-if="showMobileMenu" class="mobile-side-menu" @click.stop>
         <div class="m-menu-header">
           <div class="logo">
-            <img src="/favicon-light.png" alt="Logo" />
-            <div class="logo-text"><strong>Nexi</strong><span>Living</span></div>
+            <NexiLivingLogo tono="claro" class="logo-nexiliving" />
           </div>
           <button class="m-close-btn" @click="closeMobileMenu">✕</button>
         </div>
@@ -247,6 +245,7 @@
 </template>
 
 <script setup lang="ts">
+import NexiLivingLogo from "@/components/NexiLivingLogo.vue";
 import { ref, onMounted, onBeforeUnmount, watch } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
