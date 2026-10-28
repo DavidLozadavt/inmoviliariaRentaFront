@@ -414,7 +414,7 @@ const getStatusConfig = (status: string) => { const s = (status || '').toLowerCa
 
 <style scoped>
 /* ═══════════════════════════════════════════════
-   CONTRACTS — RENTUS ADMIN 2025
+   CONTRACTS — NEXILIVING ADMIN 2025
    ═══════════════════════════════════════════════ */
 .rx-contracts {
   --surface: var(--admin-surface, #fff);

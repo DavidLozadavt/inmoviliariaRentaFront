@@ -41,7 +41,7 @@ import { useRouter } from 'vue-router';
 import { useHead } from '@unhead/vue';
 
 useHead({
-  title: '404 — Página no encontrada | Rentus',
+  title: '404 — Página no encontrada | NexiLiving',
   meta: [{ name: 'robots', content: 'noindex, nofollow' }],
 });
 

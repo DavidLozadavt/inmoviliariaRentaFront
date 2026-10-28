@@ -480,14 +480,14 @@
       "title": "Síguenos"
     },
     "bottom": {
-      "rights": "© 2025 RentUs. Todos los derechos reservados",
+      "rights": "© 2025 NexiLiving. Todos los derechos reservados",
       "legal": "Aviso Legal",
       "privacy": "Política de Privacidad"
     }
   },
   "faq": {
     "title": "Preguntas Frecuentes",
-    "subtitle": "Encuentra respuestas rápidas a las dudas más comunes sobre RentUs",
+    "subtitle": "Encuentra respuestas rápidas a las dudas más comunes sobre NexiLiving",
     "cta": {
       "text": "¿No encontraste tu respuesta?",
       "button": "Hablar con soporte"
@@ -498,7 +498,7 @@
     },
     "questions": {
       "q1": {
-        "question": "¿Cómo puedo publicar mi propiedad en RentUs?",
+        "question": "¿Cómo puedo publicar mi propiedad en NexiLiving?",
         "answer": "Es muy sencillo. Regístrate como propietario, ve a tu panel y selecciona 'Publicar Propiedad'. Completa los datos básicos, sube fotos de alta calidad y ¡listo! Nuestro equipo revisará la información para activarla."
       },
       "q2": {
@@ -515,7 +515,7 @@
       },
       "q5": {
         "question": "¿Es seguro compartir mis datos personales?",
-        "answer": "Absolutamente. En RentUs utilizamos encriptación de grado bancario (SSL) para proteger toda tu información sensible. Nunca compartimos tus datos con terceros sin tu consentimiento explícito."
+        "answer": "Absolutamente. En NexiLiving utilizamos encriptación de grado bancario (SSL) para proteger toda tu información sensible. Nunca compartimos tus datos con terceros sin tu consentimiento explícito."
       },
       "q6": {
         "question": "¿Puedo cancelar mi contrato antes de tiempo?",
@@ -1194,11 +1194,11 @@
       "sections": {
         "identification": {
           "title": "1. Identificación del Aplicativo",
-          "content": "<p>RENTUS es una plataforma digital de Software as a Service (SaaS) diseñada para la gestión integral de activos inmobiliarios, facilitando la conexión y comunicación entre propietarios, arrendadores e inquilinos.</p><p>El uso de este aplicativo implica la aceptación plena de los términos aquí descritos.</p>"
+          "content": "<p>NEXILIVING es una plataforma digital de Software as a Service (SaaS) diseñada para la gestión integral de activos inmobiliarios, facilitando la conexión y comunicación entre propietarios, arrendadores e inquilinos.</p><p>El uso de este aplicativo implica la aceptación plena de los términos aquí descritos.</p>"
         },
         "usage": {
           "title": "2. Condiciones de Uso",
-          "content": "<p>El usuario se compromete a hacer un uso lícito, diligente y correcto de la plataforma. Queda prohibido:</p><ul><li>Utilizar el sistema para fines fraudulentos o ilícitos.</li><li>Suplantar la identidad de otros usuarios o proporcionar información falsa sobre propiedades.</li><li>Interferir con el funcionamiento técnico de los servidores de RENTUS.</li></ul>"
+          "content": "<p>El usuario se compromete a hacer un uso lícito, diligente y correcto de la plataforma. Queda prohibido:</p><ul><li>Utilizar el sistema para fines fraudulentos o ilícitos.</li><li>Suplantar la identidad de otros usuarios o proporcionar información falsa sobre propiedades.</li><li>Interferir con el funcionamiento técnico de los servidores de NEXILIVING.</li></ul>"
         },
         "responsibilities": {
           "title": "3. Responsabilidades del Usuario",
@@ -1206,15 +1206,15 @@
         },
         "liability": {
           "title": "4. Limitaciones de Responsabilidad",
-          "content": "<p>RENTUS actúa como un facilitador tecnológico. No somos parte de la relación contractual final entre arrendador e inquilino, ni nos responsabilizamos por:</p><ul><li>Incumplimientos en los pagos por parte de los inquilinos.</li><li>Daños físicos en las propiedades.</li><li>Disponibilidad 100% ininterrumpida del servicio (aunque trabajamos para garantizar el 99.9%).</li></ul>"
+          "content": "<p>NEXILIVING actúa como un facilitador tecnológico. No somos parte de la relación contractual final entre arrendador e inquilino, ni nos responsabilizamos por:</p><ul><li>Incumplimientos en los pagos por parte de los inquilinos.</li><li>Daños físicos en las propiedades.</li><li>Disponibilidad 100% ininterrumpida del servicio (aunque trabajamos para garantizar el 99.9%).</li></ul>"
         },
         "intellectual": {
           "title": "5. Propiedad Intelectual",
-          "content": "<p>El software, diseño, logotipos, textos y arquitectura de RENTUS son propiedad exclusiva de sus desarrolladores originales. Queda prohibida la reproducción total o parcial sin autorización expresa por escrito.</p>"
+          "content": "<p>El software, diseño, logotipos, textos y arquitectura de NEXILIVING son propiedad exclusiva de sus desarrolladores originales. Queda prohibida la reproducción total o parcial sin autorización expresa por escrito.</p>"
         },
         "termination": {
           "title": "6. Suspensión y Cancelación",
-          "content": "<p>RENTUS se reserva el derecho de suspender o cancelar cuentas de usuarios que infrinjan estos términos, realicen spam o utilicen la plataforma para actividades sospechosas de fraude.</p>"
+          "content": "<p>NEXILIVING se reserva el derecho de suspender o cancelar cuentas de usuarios que infrinjan estos términos, realicen spam o utilicen la plataforma para actividades sospechosas de fraude.</p>"
         }
       }
     },
@@ -1224,7 +1224,7 @@
       "sections": {
         "responsible": {
           "title": "1. Responsable del Tratamiento",
-          "content": "<p>RENTUS es el responsable del tratamiento de los datos personales recopilados a través de esta plataforma, garantizando el cumplimiento de la Ley 1581 de 2012 de Protección de Datos Personales en Colombia.</p>"
+          "content": "<p>NEXILIVING es el responsable del tratamiento de los datos personales recopilados a través de esta plataforma, garantizando el cumplimiento de la Ley 1581 de 2012 de Protección de Datos Personales en Colombia.</p>"
         },
         "dataCollected": {
           "title": "2. Datos Recopilados",
@@ -1240,7 +1240,7 @@
         },
         "providers": {
           "title": "5. Proveedores Externos",
-          "content": "<p>RENTUS utiliza servicios de terceros de confianza (por ejemplo, pasarelas de pago y servicios de almacenamiento en la nube) para operar. Estos proveedores solo tienen acceso a la información mínima necesaria y cumplen con altos estándares de seguridad.</p>"
+          "content": "<p>NEXILIVING utiliza servicios de terceros de confianza (por ejemplo, pasarelas de pago y servicios de almacenamiento en la nube) para operar. Estos proveedores solo tienen acceso a la información mínima necesaria y cumplen con altos estándares de seguridad.</p>"
         },
         "rights": {
           "title": "6. Derechos del Usuario",

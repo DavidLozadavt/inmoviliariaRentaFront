@@ -4,7 +4,7 @@
     <!-- Logo -->
     <div class="logo" @click="goHome" style="cursor: pointer">
       <img src="/favicon-light.png" alt="Logo" />
-      <div class="logo-text"><strong>Rent</strong><span>Us</span></div>
+      <div class="logo-text"><strong>Nexi</strong><span>Living</span></div>
     </div>
 
     <!-- Barra de navegación (Desktop) -->
@@ -169,7 +169,7 @@
         <div class="m-menu-header">
           <div class="logo">
             <img src="/favicon-light.png" alt="Logo" />
-            <div class="logo-text"><strong>Rent</strong><span>Us</span></div>
+            <div class="logo-text"><strong>Nexi</strong><span>Living</span></div>
           </div>
           <button class="m-close-btn" @click="closeMobileMenu">✕</button>
         </div>

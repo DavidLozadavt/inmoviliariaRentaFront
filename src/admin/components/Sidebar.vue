@@ -11,7 +11,7 @@
         </div>
         <transition name="slide-text">
           <div v-if="!isCollapsed" class="brand-text">
-            <span class="brand-name">RentUs</span>
+            <span class="brand-name">NexiLiving</span>
             <span class="brand-label">Admin</span>
           </div>
         </transition>

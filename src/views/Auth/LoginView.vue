@@ -7,10 +7,10 @@
     <div class="content-wrapper">
       <div class="brand-section">
         <div class="logo-wrapper">
-          <img src="/favicon-dark.png" alt="Logo RentUs" class="logo-icon" />
+          <img src="/favicon-dark.png" alt="Logo NexiLiving" class="logo-icon" />
           <h1 class="brand-name">
-            <span class="brand-rent">Rent</span>
-            <span class="brand-us">Us</span>
+            <span class="brand-rent">Nexi</span>
+            <span class="brand-us">Living</span>
           </h1>
         </div>
       </div>
@@ -174,8 +174,8 @@ import { useHead } from '@unhead/vue';
 import { eventBus, EVENTS } from '@/events/eventBus';
 
 useHead({
-  title: 'Iniciar Sesión | RentUs',
-  meta: [{ name: 'description', content: 'Accede a tu cuenta Rentus para gestionar tus propiedades e inquilinos.' }],
+  title: 'Iniciar Sesión | NexiLiving',
+  meta: [{ name: 'description', content: 'Accede a tu cuenta NexiLiving para gestionar tus propiedades e inquilinos.' }],
 });
 
 const email = ref("");

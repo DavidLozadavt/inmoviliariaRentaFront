@@ -8,10 +8,10 @@
       <!-- Brand Section -->
       <div class="brand-section">
         <div class="logo-wrapper">
-          <img src="/favicon-dark.png" alt="Logo RentUs" class="logo-icon" />
+          <img src="/favicon-dark.png" alt="Logo NexiLiving" class="logo-icon" />
           <h1 class="brand-name">
-            <span class="brand-rent">Rent</span>
-            <span class="brand-us">Us</span>
+            <span class="brand-rent">Nexi</span>
+            <span class="brand-us">Living</span>
           </h1>
         </div>
       </div>

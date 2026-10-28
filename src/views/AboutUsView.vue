@@ -10,7 +10,7 @@
             <div class="hero__inner">
                 <div class="hero__kicker reveal reveal--fade">
                     <span class="kicker-line"></span>
-                    Sobre Rentus
+                    Sobre NexiLiving
                 </div>
                 <h1 class="hero__headline reveal reveal--up" style="--delay:.1s">
                     Una nueva forma<br />
@@ -109,7 +109,7 @@
         <!-- ░░ DIFFERENTIATORS ░░ -->
         <section class="diff">
             <div class="diff__head">
-                <span class="section-label reveal reveal--fade">¿Por qué Rentus?</span>
+                <span class="section-label reveal reveal--fade">¿Por qué NexiLiving?</span>
                 <h2 class="section-title reveal reveal--up" style="--delay:.1s">
                     Menos fricción.<br /><em>Más confianza.</em>
                 </h2>
@@ -204,7 +204,7 @@
                     Encuentra tu próximo<br /><em>hogar hoy mismo.</em>
                 </h2>
                 <p class="cta__body">
-                    Únete a Rentus. Sin costos ocultos, sin promesas vacías.
+                    Únete a NexiLiving. Sin costos ocultos, sin promesas vacías.
                 </p>
                 <div class="cta__actions">
                     <router-link to="/propiedades" class="btn btn--fill btn--lg">
@@ -236,7 +236,7 @@ const stats = [
 ]
 
 const timeline = [
-    { date: 'Enero 2024', text: 'Nace Rentus: una plataforma pensada para simplificar el arrendamiento en Colombia.' },
+    { date: 'Enero 2024', text: 'Nace NexiLiving: una plataforma pensada para simplificar el arrendamiento en Colombia.' },
     { date: 'Junio 2024', text: 'Lanzamos la primera versión con propiedades en Popayán y los primeros arrendatarios.' },
     { date: 'Octubre 2024', text: 'Superamos 500 usuarios y 200 propiedades verificadas en la plataforma.' },
     { date: 'Hoy', text: 'Seguimos iterando, escuchando y construyendo — semana a semana.' },
@@ -288,7 +288,7 @@ const testimonials = [
     { text: 'Encontré mi apartamento en menos de una semana. El proceso fue claro y sin sorpresas.', author: 'María González', role: 'Diseñadora gráfica', avatar: 'MG' },
     { text: 'Como propietario, me da tranquilidad que los inquilinos estén verificados antes de contactarme.', author: 'Roberto Sánchez', role: 'Propietario', avatar: 'RS' },
     { text: 'La firma digital del contrato fue lo mejor. Todo desde mi celular, sin ir a ninguna parte.', author: 'Laura Martínez', role: 'Estudiante', avatar: 'LM' },
-    { text: 'Proceso súper transparente. Precios justos, sin comisiones escondidas. Volveré a usar Rentus sin dudarlo.', author: 'Diego Fernández', role: 'Ingeniero', avatar: 'DF' },
+    { text: 'Proceso súper transparente. Precios justos, sin comisiones escondidas. Volveré a usar NexiLiving sin dudarlo.', author: 'Diego Fernández', role: 'Ingeniero', avatar: 'DF' },
 ]
 
 // ── Canvas Particles ────────────────────────────────────────

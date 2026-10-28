@@ -210,8 +210,8 @@ const router = createRouter({
 router.beforeEach((to, _from, next) => {
   // 1. Update document title immediately (Synchronous)
   document.title = to.meta.title
-    ? `${to.meta.title} | RentUs`
-    : "RentUs — Encuentra tu hogar ideal";
+    ? `${to.meta.title} | NexiLiving`
+    : "NexiLiving — Encuentra tu hogar ideal";
 
   const isAuthenticated = authService.isAuthenticated();
   const requiresAuth = to.matched.some((r) => r.meta.requiresAuth);

@@ -1590,7 +1590,7 @@ onUnmounted(() => {
 
   .stat-inline-number {
     font-size: 1.25rem !important;
-    color: #da9c5f !important; /* Color RentUs Gold */
+    color: #da9c5f !important; /* Color NexiLiving Gold */
     font-weight: 800 !important;
   }
 
@@ -1601,7 +1601,7 @@ onUnmounted(() => {
     letter-spacing: 0.5px !important;
   }
 
-  /* 🛡️ RENTUS MOBILE MAP VISIBILITY CRITICAL FIX */
+  /* 🛡️ NEXILIVING MOBILE MAP VISIBILITY CRITICAL FIX */
   .modern-hero .hero-content-wrapper .hero-image-section.mobile-force-map {
     display: flex !important;
     visibility: visible !important;

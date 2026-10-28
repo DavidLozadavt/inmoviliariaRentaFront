@@ -1227,7 +1227,7 @@
 .m-link svg {
   width: 20px;
   font-size: 1.1rem;
-  color: #da9c5f; /* RentUs Gold */
+  color: #da9c5f; /* NexiLiving Gold */
   transition: all 0.3s ease;
   flex-shrink: 0;
 }
@@ -1606,7 +1606,7 @@
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    background: #2e1d17 !important; /* Base color RentUs */
+    background: #2e1d17 !important; /* Base color NexiLiving */
   }
 
   /* Force hide desktop navigation COMPLETELY */

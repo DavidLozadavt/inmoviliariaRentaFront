@@ -195,7 +195,7 @@ function generateContractHTML(contract: ContractData): string {
       </div>
 
       <div class="footer">
-        <p>Documento generado electrónicamente por RentUs • ${new Date().toLocaleDateString('es-ES')}</p>
+        <p>Documento generado electrónicamente por NexiLiving • ${new Date().toLocaleDateString('es-ES')}</p>
       </div>
     </body>
     </html>

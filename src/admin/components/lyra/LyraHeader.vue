@@ -39,7 +39,7 @@ const statusLabel = computed(() => {
           <h1 class="lyra-title">Lyra</h1>
           <span class="lyra-version">{{ status?.version || 'v2.1' }}</span>
         </div>
-        <p class="lyra-subtitle">Cerebro conversacional de RentUs · NLP Engine</p>
+        <p class="lyra-subtitle">Cerebro conversacional de NexiLiving · NLP Engine</p>
       </div>
     </div>
 

@@ -7,10 +7,10 @@
         <div class="content-wrapper">
             <div class="brand-section">
                 <div class="logo-wrapper">
-                    <img src="/favicon-dark.png" alt="Logo RentUs" class="logo-icon" />
+                    <img src="/favicon-dark.png" alt="Logo NexiLiving" class="logo-icon" />
                     <h1 class="brand-name">
-                        <span class="brand-rent">Rent</span>
-                        <span class="brand-us">Us</span>
+                        <span class="brand-rent">Nexi</span>
+                        <span class="brand-us">Living</span>
                     </h1>
                 </div>
             </div>
@@ -303,7 +303,7 @@ const validationErrors = ref<Record<string, string>>({});
 // Mensajes dinámicos
 const currentMessageIndex = ref(0);
 const messages = [
-    { title: "Únete a RentUs", text: "Crea tu cuenta y accede a miles de propiedades en tu ciudad." },
+    { title: "Únete a NexiLiving", text: "Crea tu cuenta y accede a miles de propiedades en tu ciudad." },
     { title: "Proceso rápido", text: "Solo te tomará un minuto completar tu registro y comenzar." },
     { title: "100% Seguro", text: "Tus datos están protegidos con encriptación de nivel bancario." },
     { title: "Soporte 24/7", text: "Nuestro equipo está listo para ayudarte cuando lo necesites." }

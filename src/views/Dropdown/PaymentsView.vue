@@ -721,7 +721,7 @@ const generatePDFFromPayment = (p: any) => {
     doc.setTextColor(255, 255, 255);
     doc.setFontSize(24);
     doc.setFont('helvetica', 'bold');
-    doc.text('RENTUS', 20, 25);
+    doc.text('NEXILIVING', 20, 25);
     doc.setFontSize(10);
     doc.text(t('payments.modals.detail.transactionId'), 20, 32);
 
@@ -742,7 +742,7 @@ const generatePDFFromPayment = (p: any) => {
         [t('payments.modals.detail.reference'), `#${p.contract_id || p.contract?.id}`],
         [t('payments.table.headers.property'), p.contract?.property?.title || 'Property'],
         [t('payments.modals.detail.method'), p.card_last_four ? `**** ${p.card_last_four}` : 'N/A'],
-        ['Rentus S.A.S', 'Beneficiario'],
+        ['NexiLiving S.A.S', 'Beneficiario'],
       ],
       theme: 'grid',
       headStyles: { fillColor: primaryColor, textColor: 255 },
@@ -763,7 +763,7 @@ const generatePDFFromPayment = (p: any) => {
     doc.setFontSize(9);
     doc.setFont('helvetica', 'italic');
     doc.setTextColor(150);
-    doc.text('Este documento es un comprobante digital generado por Rentus.', 105, 280, { align: 'center' });
+    doc.text('Este documento es un comprobante digital generado por NexiLiving.', 105, 280, { align: 'center' });
 
     doc.save(`Comprobante_Rentus_${p.id}.pdf`);
     success(t('payments.alerts.pdfSuccess'), 'Success');

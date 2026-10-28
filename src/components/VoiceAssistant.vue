@@ -48,7 +48,7 @@
           'va-panel--pulse': showPulse 
         }"
         role="dialog" 
-        aria-label="Asistente de voz Rentus">
+        aria-label="Asistente de voz NexiLiving">
         
         <!-- Panel Header -->
         <div class="va-panel__header" @click="isMinimized ? isMinimized = false : null">
@@ -145,7 +145,7 @@
               </div>
             </div>
             <h4>Hola, soy Lyra</h4>
-            <p>Tu guía inteligente en RentUs. ¿En qué ciudad buscamos hoy? Puedes decirme:</p>
+            <p>Tu guía inteligente en NexiLiving. ¿En qué ciudad buscamos hoy? Puedes decirme:</p>
             <div class="va-welcome__examples">
               <button class="va-example" @click="submitText('Busco un apartamento en Santa Marta cerca al mar')">
                 "Busco un apartamento en Santa Marta cerca al mar"
@@ -1284,7 +1284,7 @@ const handleWindowResize = () => {
 
 <style scoped>
 /* ═══════════════════════════════════════════════
-   CSS VARIABLES (matching Rentus brand)
+   CSS VARIABLES (matching NexiLiving brand)
 ═══════════════════════════════════════════════ */
 .va-root {
   --va-brand: #3D2314;

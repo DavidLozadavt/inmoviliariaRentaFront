@@ -599,7 +599,7 @@ onUnmounted(() => {
 
 <style scoped>
 /* ═══════════════════════════════════════════════════
-   PROPERTIES — RENTUS ADMIN 2025 · REDESIGN FROM 0
+   PROPERTIES — NEXILIVING ADMIN 2025 · REDESIGN FROM 0
    ═══════════════════════════════════════════════════ */
 
 .rx-properties {

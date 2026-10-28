@@ -1,7 +1,7 @@
 import api from './api';
 
 /**
- * Lyra Service - Conector con el motor NLP de RentUs
+ * Lyra Service - Conector con el motor NLP de NexiLiving
  */
 
 export interface LyraStatus {

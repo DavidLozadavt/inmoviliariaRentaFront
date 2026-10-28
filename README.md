@@ -1,4 +1,4 @@
-# 🏠 Rentus — Frontend
+# 🏠 NexiLiving — Frontend
 
 > Modern rental management platform built with Vue 3, TypeScript, Vite, and Pinia.
 
@@ -170,7 +170,7 @@ E2E tests are in `src/tests/e2e/`. Configure test credentials in `.env.test`.
 
 **Proprietary Software — All rights reserved.**
 
-The **Rentus Frontend Platform** (including all UI components, views, Vue architecture, graphical assets, and client-side logic) is the exclusive intellectual property of its co-owners:  
+The **NexiLiving Frontend Platform** (including all UI components, views, Vue architecture, graphical assets, and client-side logic) is the exclusive intellectual property of its co-owners:  
 **Miguel Camilo** (`@miguelcamilok`), **Alexander Byrush** (`@Alexanderbyrush`) and **Jefer Mar** (`@jefermar`).
 
 Unauthorized copying, modification, distribution, or use of this project, via any medium, is strictly prohibited without explicit permission.

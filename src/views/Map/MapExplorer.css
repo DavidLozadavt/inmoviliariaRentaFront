@@ -3386,7 +3386,7 @@
    PREVIEW CARD
 ═══════════════════════════════════════════════ */
 /* ═══════════════════════════════════════════════
-   PREMIUM PREVIEW CARD (RentUs Style)
+   PREMIUM PREVIEW CARD (NexiLiving Style)
 ═══════════════════════════════════════════════ */
 .preview-card {
   position: absolute;
@@ -3532,7 +3532,7 @@
 
 .preview-card__close:hover {
   background: #DC2626;
-  /* RentUs Error Red */
+  /* NexiLiving Error Red */
   color: white;
   border-color: #DC2626;
   transform: rotate(90deg) scale(1.1);

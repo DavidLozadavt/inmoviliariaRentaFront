@@ -531,7 +531,7 @@ onUnmounted(() => {
 
 <style scoped>
 /* 
-  🎨 RENTUS MODERN DASHBOARD V2 
+  🎨 NEXILIVING MODERN DASHBOARD V2 
   SaaS Inspired, Clear Hierarchy, Custom Space
 */
 
