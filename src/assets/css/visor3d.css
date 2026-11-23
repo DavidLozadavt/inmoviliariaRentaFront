@@ -1,0 +1,14 @@
+/* Visor 3D de edificios: misma paleta café/dorado del sitio (tarjetas .pd-card del detalle). */
+:root {
+  --v3d-surface: #3a2318;
+  --v3d-surface-2: #2c1b14;
+  --v3d-stage: #1c120e;
+  --v3d-border: rgba(218, 156, 95, 0.24);
+  --v3d-text: #f5efe6;
+  --v3d-muted: #c2ad99;
+  --v3d-accent: #da9c5f;
+  --v3d-accent-strong: #c9853d;
+  --v3d-on-accent: #2b1a0e;
+  --v3d-accent-soft: rgba(218, 156, 95, 0.16);
+  --v3d-card: linear-gradient(135deg, rgba(62, 36, 24, 0.95), rgba(46, 29, 23, 0.95));
+}

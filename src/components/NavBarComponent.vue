@@ -20,6 +20,12 @@
           <span class="nav-text">{{ $t('navbar.links.properties') }}</span>
         </router-link>
 
+        <router-link v-if="canUseVisor3d" to="/edificios" class="nav-link" :class="{ active: route.path.startsWith('/edificios') }"
+          @click="closeMobileMenu">
+          <font-awesome-icon icon="cube" class="nav-icon" />
+          <span class="nav-text">Edificios 3D</span>
+        </router-link>
+
         <router-link to="/sobre-nosotros" class="nav-link" :class="{ active: isActive('/sobre-nosotros') }"
           @click="closeMobileMenu">
           <font-awesome-icon icon="people-group" class="nav-icon" />
@@ -152,6 +158,11 @@
             <div class="item-text">{{ $t('navbar.dropdown.maintenance') }}</div>
           </div>
 
+          <div v-if="canUseVisor3d" @click="goEdificios" class="dropdown-item">
+            <font-awesome-icon icon="building" class="item-icon" />
+            <div class="item-text">Edificios 3D</div>
+          </div>
+
           <div class="dropdown-divider"></div>
 
           <div @click="handleLogout" class="dropdown-item logout-item">
@@ -179,6 +190,9 @@
           <router-link to="/propiedades" class="m-link" @click="closeMobileMenu">
             <font-awesome-icon icon="building" /> {{ $t('navbar.links.properties') }}
           </router-link>
+          <router-link v-if="canUseVisor3d" to="/edificios" class="m-link" @click="closeMobileMenu">
+            <font-awesome-icon icon="cube" /> Edificios 3D
+          </router-link>
           <router-link to="/sobre-nosotros" class="m-link" @click="closeMobileMenu">
             <font-awesome-icon icon="people-group" /> {{ $t('navbar.links.about') }}
           </router-link>
@@ -198,6 +212,7 @@
              <div @click="goAjustes" class="m-link"><font-awesome-icon icon="cog" /> {{ $t('navbar.dropdown.settings') }}</div>
              <div @click="openMyRequestsModalFn" class="m-link"><font-awesome-icon icon="calendar-check" /> {{ $t('navbar.dropdown.myRequests') }}</div>
              <div @click="goMantenimiento" class="m-link"><font-awesome-icon icon="wrench" /> {{ $t('navbar.dropdown.maintenance') }}</div>
+             <div v-if="canUseVisor3d" @click="goEdificios" class="m-link"><font-awesome-icon icon="building" /> Edificios 3D</div>
              
              <div v-if="currentUser?.role === 'admin'" @click="goToAdminPanel" class="m-link admin"><font-awesome-icon icon="shield-alt" /> Admin</div>
              
@@ -246,7 +261,7 @@
 
 <script setup lang="ts">
 import NexiLivingLogo from "@/components/NexiLivingLogo.vue";
-import { ref, onMounted, onBeforeUnmount, watch } from "vue";
+import { ref, computed, onMounted, onBeforeUnmount, watch } from "vue";
 import { useRouter, useRoute } from "vue-router";
 import { useI18n } from "vue-i18n";
 import { authService } from "../services/auth";
@@ -387,6 +402,8 @@ const goContratos = () => { router.push("/contratos"); closeDropdown(); closeMob
 const goPagos     = () => { router.push("/pagos");     closeDropdown(); closeMobileMenu(); };
 const goMantenimiento= () => { router.push("/mantenimiento"); closeDropdown(); closeMobileMenu(); };
 const goReportes  = () => { router.push("/reportes"); closeDropdown(); closeMobileMenu(); };
+const goEdificios = () => { router.push("/edificios"); closeDropdown(); closeMobileMenu(); };
+const canUseVisor3d = computed(() => ["landlord", "admin", "support"].includes(currentUser.value?.role ?? ""));
 const goAjustes   = () => { router.push("/ajustes");   closeDropdown(); closeMobileMenu(); };
 
 // ==================== UI ====================
