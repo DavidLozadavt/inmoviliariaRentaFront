@@ -72,14 +72,17 @@ onMounted(load)
 
 <template>
   <div class="page">
+    <section class="hero"><div class="hero-in">
     <header class="head">
       <div>
         <span class="eyebrow">Visor 3D</span>
-        <h1>Edificios 3D</h1>
+        <h1>Inmobiliarias</h1>
         <p>Torres y conjuntos en 3D: disponibilidad, cartera y PQRS por unidad, con recorrido de cada espacio.</p>
       </div>
       <button type="button" class="primary" @click="router.push({ name: 'Visor3dNew' })">+ Nuevo edificio</button>
     </header>
+    </div></section>
+    <div class="list-wrap">
 
     <div v-if="loading" class="grid">
       <div v-for="i in 3" :key="i" class="item skeleton" />
@@ -156,26 +159,36 @@ onMounted(load)
     <Pagination v-if="filtered.length > perPage" :current-page="page" :total-pages="totalPages" :total-items="filtered.length"
       :items-per-page="perPage" @update:page="onPage" />
     </template>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.page { max-width: 1240px; margin: 96px auto 40px; padding: 28px 20px 40px; border-radius: 20px; background: var(--v3d-card); border: 1px solid var(--v3d-border); color: var(--v3d-text); }
+.page { background: linear-gradient(135deg, #faf9f7 0%, #f1ede6 100%); min-height: 100vh; color: var(--v3d-text); padding-bottom: 60px; }
+/* Mismo esquema que Propiedades: banner oscuro arriba, buscador como tarjeta blanca encima, fondo crema */
+.hero { background: radial-gradient(circle at 70% 20%, #5a3a2a, #2e1d17 70%); padding: 120px 20px 90px; }
+.hero-in { max-width: 1200px; margin: 0 auto; }
+.hero .head { margin: 0; }
+.hero h1 { color: #fff; font-size: clamp(32px, 4vw, 48px); font-weight: 800; }
+.hero .head p { color: #e7d6c4; }
+.hero .eyebrow { color: #f0c48f; }
+.list-wrap { max-width: 1200px; margin: -56px auto 0; padding: 0 20px; position: relative; }
+.toolbar { background: #fff; border-radius: 18px; padding: 18px; box-shadow: 0 18px 40px rgba(46, 29, 23, 0.16); margin-bottom: 26px !important; }
 .head { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 24px; }
 .eyebrow { font-family: ui-monospace, monospace; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--v3d-accent); }
 h1 { font-size: 30px; margin-top: 4px; }
 .head p { color: var(--v3d-muted); margin-top: 6px; max-width: 620px; }
 .toolbar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
-.search { flex: 1 1 280px; display: flex; align-items: center; gap: 8px; background: rgba(0,0,0,.25); border: 1px solid var(--v3d-border);
+.search { flex: 1 1 280px; display: flex; align-items: center; gap: 8px; background: var(--v3d-surface-2); border: 1px solid var(--v3d-border);
   border-radius: 12px; padding: 0 14px; transition: border-color .2s; }
 .search:focus-within { border-color: var(--v3d-accent); box-shadow: 0 0 0 3px var(--v3d-accent-soft); }
 .search input { flex: 1; border: 0; background: transparent; color: var(--v3d-text); padding: 11px 0; font-size: 14px; outline: none; }
-.toolbar select { padding: 10px 12px; border: 1px solid var(--v3d-border); border-radius: 12px; background: rgba(0,0,0,.25); color: var(--v3d-text); font-size: 13px; }
+.toolbar select { padding: 10px 12px; border: 1px solid var(--v3d-border); border-radius: 12px; background: var(--v3d-surface-2); color: var(--v3d-text); font-size: 13px; }
 .count { color: var(--v3d-muted); font-size: 13px; margin-bottom: 14px; display: flex; gap: 10px; align-items: center; }
 .new { position: absolute; top: 10px; right: 10px; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 999px; background: #22c55e; color: #052e16; }
 :deep(.pagination-container), :deep(nav) { margin-top: 24px; }
 .grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
-.item { border-radius: 16px; overflow: hidden; background: rgba(0, 0, 0, .22); border: 1px solid var(--v3d-border); cursor: pointer; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; display: flex; flex-direction: column; }
+.item { border-radius: 16px; overflow: hidden; background: var(--v3d-surface-2); border: 1px solid var(--v3d-border); cursor: pointer; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; display: flex; flex-direction: column; }
 .item:hover { transform: translateY(-4px); border-color: var(--v3d-accent); box-shadow: 0 14px 34px rgba(0, 0, 0, .35); }
 .cover { position: relative; aspect-ratio: 16 / 10; background: radial-gradient(circle at 50% 30%, #3b2519, #1c120e); overflow: hidden; }
 .cover img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
@@ -190,7 +203,7 @@ h1 { font-size: 30px; margin-top: 4px; }
 .body h3 { font-size: 18px; }
 .muted { color: var(--v3d-muted); font-size: 13px; }
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 4px; }
-.stats div { background: rgba(0, 0, 0, .22); border-radius: 10px; padding: 6px 10px; }
+.stats div { background: var(--v3d-surface-2); border-radius: 10px; padding: 6px 10px; }
 .stats dt { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--v3d-muted); }
 .stats dd { font-size: 18px; font-weight: 700; }
 .bar { height: 5px; border-radius: 999px; background: rgba(239, 68, 68, .35); overflow: hidden; }
@@ -201,10 +214,10 @@ h1 { font-size: 30px; margin-top: 4px; }
 .secondary:hover { border-color: var(--v3d-accent); }
 .skeleton { height: 360px; background: linear-gradient(90deg, rgba(255,255,255,.03), rgba(255,255,255,.08), rgba(255,255,255,.03)); background-size: 200% 100%; animation: shimmer 1.4s infinite; cursor: default; }
 @keyframes shimmer { to { background-position: -200% 0; } }
-.state { padding: 48px 16px; text-align: center; color: var(--v3d-muted); background: rgba(0, 0, 0, .18); border-radius: 16px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.state { padding: 48px 16px; text-align: center; color: var(--v3d-muted); background: var(--v3d-surface-2); border-radius: 16px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .state.err { color: #f87171; }
 .empty-ico { font-size: 44px; }
 .state h3 { color: var(--v3d-text); }
 .link { background: none; border: 0; color: var(--v3d-accent); cursor: pointer; }
-@media (max-width: 640px) { .page { margin-top: 80px; border-radius: 0; } }
+@media (max-width: 640px) { .hero { padding: 96px 16px 80px; } .list-wrap { padding: 0 12px; } }
 </style>

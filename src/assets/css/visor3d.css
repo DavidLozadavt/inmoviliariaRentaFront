@@ -1,14 +1,17 @@
-/* Visor 3D de edificios: misma paleta café/dorado del sitio (tarjetas .pd-card del detalle). */
 :root {
-  --v3d-surface: #3a2318;
-  --v3d-surface-2: #2c1b14;
+  /* Visor 3D: mismo estilo que Propiedades (crema/blanco con café y dorado) */
+  --v3d-surface: #ffffff;
+  --v3d-surface-2: #f6f2ec;
   --v3d-stage: #1c120e;
-  --v3d-border: rgba(218, 156, 95, 0.24);
-  --v3d-text: #f5efe6;
-  --v3d-muted: #c2ad99;
-  --v3d-accent: #da9c5f;
-  --v3d-accent-strong: #c9853d;
-  --v3d-on-accent: #2b1a0e;
-  --v3d-accent-soft: rgba(218, 156, 95, 0.16);
-  --v3d-card: linear-gradient(135deg, rgba(62, 36, 24, 0.95), rgba(46, 29, 23, 0.95));
+  --v3d-border: rgba(59, 37, 29, 0.14);
+  --v3d-text: #3b251d;
+  --v3d-muted: #7a6355;
+  --v3d-accent: #b97836;
+  --v3d-accent-strong: #9a5f26;
+  --v3d-on-accent: #ffffff;
+  --v3d-accent-soft: rgba(185, 120, 54, 0.12);
+  --v3d-card: linear-gradient(135deg, #faf9f7 0%, #f1ede6 100%);
 }
+/* Sobre el lienzo 3D (fondo oscuro) el texto va claro */
+.stage .legend, .stage .counters, .stage .live, .stage .live-unit { color: #f5efe6; }
+.stage .legend b, .stage .counters small { color: #c9b6a2; }

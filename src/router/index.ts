@@ -135,7 +135,7 @@ const routes: RouteRecordRaw[] = [
         path: "/edificios",
         name: "Visor3dList",
         component: Visor3dList,
-        meta: { title: "Edificios 3D", requiresAuth: true },
+        meta: { title: "Inmobiliarias", requiresAuth: true },
       },
       {
         path: "/edificios/nuevo",

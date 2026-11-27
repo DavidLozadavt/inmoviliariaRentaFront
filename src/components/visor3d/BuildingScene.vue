@@ -23,7 +23,7 @@ const props = defineProps<{
   faces?: { left?: string | null; back?: string | null; roof?: string | null } | null
   roofColor?: string | null
 }>()
-defineEmits<{ pick: [slot: Slot | null] }>()
+defineEmits<{ pick: [slot: Slot | null]; hover: [h: { slot: Slot; x: number; y: number } | null] }>()
 
 const lowEnd = isLowEnd()
 // Con plano del conjunto la cámara apunta al centro del plano; si no, al centro de las torres
@@ -49,7 +49,7 @@ const camPos = computed<[number, number, number]>(() => [
       :min-distance="8"
       :max-distance="dist * 3"
     />
-    <TresHemisphereLight :args="['#fff4e6', '#3a2a22', 1.7]" />
+    <TresHemisphereLight :args="['#fff4e6', '#3a2a22', 0.9]" />
     <TresDirectionalLight :position="[dist, dist * 1.4, dist * 0.6]" :intensity="1.4" />
     <TresMesh v-if="!sitePlan" :rotation-x="-Math.PI / 2" :position="[center[0], -0.13, center[2]]">
       <TresCircleGeometry :args="[dist * 1.6, 48]" />
@@ -69,6 +69,7 @@ const camPos = computed<[number, number, number]>(() => [
       :faces="faces"
       :roof-color="roofColor"
       @pick="$emit('pick', $event)"
+      @hover="$emit('hover', $event)"
     />
   </TresCanvas>
 </template>

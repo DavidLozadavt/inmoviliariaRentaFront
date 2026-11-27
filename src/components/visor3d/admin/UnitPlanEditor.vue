@@ -188,7 +188,7 @@ function useTemplate() {
 <style scoped>
 .upe { display: flex; flex-direction: column; gap: 10px; }
 .bar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-.seg { display: inline-flex; background: rgba(0,0,0,.25); border-radius: 10px; padding: 3px; }
+.seg { display: inline-flex; background: var(--v3d-surface-2); border-radius: 10px; padding: 3px; }
 .seg button { border: 0; background: transparent; color: var(--v3d-muted); padding: 7px 12px; border-radius: 8px; cursor: pointer; font-size: 13px; }
 .seg button.on { background: var(--v3d-accent-soft); color: var(--v3d-accent); font-weight: 700; }
 .ghost { background: transparent; color: var(--v3d-text); border: 1px solid var(--v3d-border); border-radius: 10px; padding: 7px 12px; cursor: pointer; font-size: 13px; }

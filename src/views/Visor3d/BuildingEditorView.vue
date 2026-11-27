@@ -26,7 +26,7 @@ const router = useRouter()
 const alerts = useAlerts()
 
 const id = computed(() => (route.params.id ? Number(route.params.id) : null))
-const tab = ref<'structure' | 'units' | 'photos' | 'share'>('structure')
+const tab = ref<'structure' | 'units' | 'photos' | 'share'>((['units', 'photos', 'share'] as const).find((t) => t === route.query.tab) ?? 'structure')
 const loading = ref(!!id.value)
 const saving = ref(false)
 const payload = ref<BuildingPayload | null>(null)
@@ -908,7 +908,7 @@ onMounted(load)
 .tabs button:disabled { opacity: .45; cursor: not-allowed; }
 .structure { display: grid; grid-template-columns: minmax(0, 440px) minmax(0, 1fr); gap: 16px; align-items: start; }
 .form { display: flex; flex-direction: column; gap: 12px; }
-fieldset { background: rgba(0, 0, 0, .18); border: 1px solid var(--v3d-border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+fieldset { background: var(--v3d-surface-2); border: 1px solid var(--v3d-border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
 legend { font-weight: 600; font-size: 14px; padding: 0 6px; }
 label { display: flex; flex-direction: column; gap: 3px; font-size: 12px; color: var(--v3d-muted); }
 input, select { padding: 7px 9px; border: 1px solid var(--v3d-border); border-radius: 8px; font-size: 14px; background: var(--v3d-surface); color: var(--v3d-text); min-width: 0; }
@@ -924,7 +924,7 @@ input[type='color'] { padding: 2px; height: 34px; width: 46px; }
 .special { display: grid; grid-template-columns: 1fr 70px 1fr auto; gap: 6px; align-items: center; }
 .hint, .muted { color: var(--v3d-muted); font-size: 12px; }
 .warn { color: #f87171; font-size: 13px; }
-.save { position: sticky; bottom: 0; background: #2f1d15; padding: 10px 0; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--v3d-border); }
+.save { position: sticky; bottom: 0; background: var(--v3d-surface); padding: 10px 0; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--v3d-border); }
 .preview { position: sticky; top: 80px; }
 .pmodes { display: flex; gap: 4px; align-items: center; margin-bottom: 8px; flex-wrap: wrap; }
 .pmodes button { border: 1px solid var(--v3d-border); background: transparent; color: var(--v3d-muted); border-radius: 8px; padding: 6px 12px; cursor: pointer; font-size: 13px; }
@@ -942,7 +942,7 @@ input[type='color'] { padding: 2px; height: 34px; width: 46px; }
 .drop strong { color: var(--v3d-text); font-size: 14px; }
 .drop.busy { opacity: .6; pointer-events: none; }
 .drop-ico { font-size: 28px; }
-.facade-box { margin-top: 10px; border: 1px solid var(--v3d-border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 10px; background: rgba(0,0,0,.18); }
+.facade-box { margin-top: 10px; border: 1px solid var(--v3d-border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 10px; background: var(--v3d-surface-2); }
 .facade-box > div:first-child { display: flex; flex-direction: column; gap: 3px; }
 .facade-box small { color: var(--v3d-muted); font-size: 12px; }
 .facade-thumbs { display: flex; gap: 8px; }
@@ -950,15 +950,15 @@ input[type='color'] { padding: 2px; height: 34px; width: 46px; }
 .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
 .primary.sm { padding: 8px 14px; font-size: 13px; }
 .stepper { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
-.stepper button { flex: none; display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--v3d-border); background: rgba(0,0,0,.18);
+.stepper button { flex: none; display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--v3d-border); background: var(--v3d-surface-2);
   color: var(--v3d-muted); border-radius: 999px; padding: 5px 12px 5px 5px; cursor: pointer; font-size: 12px; white-space: nowrap; }
 .stepper b { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.08); color: var(--v3d-text); font-size: 11px; }
 .stepper button.done b { background: rgba(34,197,94,.25); color: #4ade80; }
 .stepper button.on { border-color: var(--v3d-accent); color: var(--v3d-text); background: var(--v3d-accent-soft); }
 .stepper button.on b { background: var(--v3d-accent); color: var(--v3d-on-accent); }
 .progress-txt { font-size: 11px; color: var(--v3d-muted); margin-top: -4px; }
-.step { border: 1px solid var(--v3d-border); border-radius: 14px; background: rgba(0,0,0,.16); scroll-margin-top: 90px; transition: border-color .2s; }
-.step.open { border-color: var(--v3d-accent); background: rgba(0,0,0,.24); }
+.step { border: 1px solid var(--v3d-border); border-radius: 14px; background: var(--v3d-surface-2); scroll-margin-top: 90px; transition: border-color .2s; }
+.step.open { border-color: var(--v3d-accent); background: var(--v3d-surface-2); }
 .step-head { width: 100%; display: flex; gap: 12px; align-items: center; text-align: left; background: none; border: 0; color: var(--v3d-text); padding: 12px 14px; cursor: pointer; }
 .step-head > b { width: 30px; height: 30px; flex: none; border-radius: 50%; display: grid; place-items: center; background: rgba(255,255,255,.08); font-size: 13px; }
 .step.done .step-head > b { background: rgba(34,197,94,.22); color: #4ade80; }

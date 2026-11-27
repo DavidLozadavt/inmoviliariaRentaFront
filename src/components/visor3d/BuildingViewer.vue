@@ -79,6 +79,10 @@ const floorSlots = computed(() =>
     : [],
 )
 
+// ── Etiqueta al pasar el mouse sobre una unidad
+const hover = ref<{ slot: Slot; x: number; y: number } | null>(null)
+const hoverUnit = computed(() => (hover.value ? unitsByKey.value.get(hover.value.slot.key) ?? null : null))
+
 // ── Planta del piso
 const floorColors = computed(() => floorSlots.value.map((s) => colors.value[layout.value.slots.indexOf(s)]))
 const footprint = computed(() => {
@@ -264,6 +268,7 @@ async function onSave(data: { commercial_status: CommercialStatus; monthly_price
             :faces="{ left: payload.building.facade_left_url, back: payload.building.facade_back_url, roof: payload.building.roof_url }"
             :roof-color="payload.config.colors?.roof"
             @pick="onPick"
+            @hover="hover = $event"
           />
           <template #fallback>
             <div class="loading"><span class="spinner" />Cargando visor 3D…</div>
@@ -309,6 +314,13 @@ async function onSave(data: { commercial_status: CommercialStatus; monthly_price
             @pick="(s) => s && pickUnit(s)"
             @floor="selectFloor"
           />
+        </div>
+
+        <div v-if="hover && view === '3d'" class="tip3d" :style="{ left: hover.x + 'px', top: hover.y + 'px' }">
+          <strong>Torre {{ hover.slot.tower }} · {{ hover.slot.unit_code }}</strong>
+          <span v-if="hoverUnit" :class="hoverUnit.commercial_status">{{ STATUS_LABELS[hoverUnit.commercial_status] }} · {{ formatCOP(hoverUnit.price) }}</span>
+          <span v-else>Sin unidad</span>
+          <small>Piso {{ hover.slot.floor }}{{ hover.slot.type_code ? ' · Tipo ' + hover.slot.type_code : '' }} · clic para ver</small>
         </div>
 
         <ul v-if="!(view === 'floor' && mode === 'commercial')" class="legend" :class="{ low: view === 'floor' }" aria-label="Leyenda">
@@ -437,6 +449,14 @@ async function onSave(data: { commercial_status: CommercialStatus; monthly_price
 .live-unit { position: absolute; top: 58px; left: 10px; display: inline-flex; align-items: center; gap: 8px; background: rgba(24,24,27,.88); color: #f4f4f5; padding: 8px 14px; border-left: 3px solid #22c55e; border-radius: 6px; font-family: ui-monospace, monospace; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; pointer-events: none; }
 .live-unit.reserved { border-left-color: #eab308; } .live-unit.reserved i { background: #eab308; }
 .live-unit.sold, .live-unit.rented { border-left-color: #ef4444; } .live-unit.sold i, .live-unit.rented i { background: #ef4444; }
+.tip3d { position: absolute; z-index: 6; transform: translate(14px, -50%); pointer-events: none; display: flex; flex-direction: column; gap: 2px;
+  background: rgba(24, 15, 12, .92); border: 1px solid rgba(139, 92, 246, .55); border-radius: 10px; padding: 8px 12px; color: #f5efe6;
+  box-shadow: 0 10px 28px rgba(0,0,0,.45); white-space: nowrap; backdrop-filter: blur(6px); }
+.tip3d strong { font-size: 13px; }
+.tip3d span { font-size: 12px; font-weight: 700; color: #4ade80; }
+.tip3d span.reserved { color: #facc15; }
+.tip3d span.rented, .tip3d span.sold { color: #f87171; }
+.tip3d small { font-size: 10px; color: #c2ad99; }
 .hint { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(15,23,42,.7); color: #fff; font-size: 12px; padding: 5px 12px; border-radius: 999px; pointer-events: none; white-space: nowrap; }
 .card-wrap { position: absolute; right: 10px; bottom: 10px; width: min(340px, calc(100% - 20px)); }
 .tour-msg { background: var(--v3d-surface); padding: 6px 10px; border-radius: 8px; margin-top: 6px; font-size: 13px; }

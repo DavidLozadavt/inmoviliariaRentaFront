@@ -6,7 +6,8 @@
 import { onBeforeUnmount, onMounted, shallowRef, watch } from 'vue'
 import { useTres } from '@tresjs/core'
 import * as THREE from 'three'
-import { type BuildingLayout, type Slot, rotateXZ } from '@/utils/visor3d/layout'
+import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js'
+import { type BuildingLayout, type Slot, layoutCenter, rotateXZ } from '@/utils/visor3d/layout'
 import { SPECIAL_COLORS } from '@/utils/visor3d/colors'
 import { mediaUrl } from '@/utils/visor3d/device'
 
@@ -25,9 +26,9 @@ const props = defineProps<{
   siteWidth?: number | null     // ancho real del plano (m)
 }>()
 
-const emit = defineEmits<{ pick: [slot: Slot | null] }>()
+const emit = defineEmits<{ pick: [slot: Slot | null]; hover: [h: { slot: Slot; x: number; y: number } | null] }>()
 
-const { renderer, camera, invalidate } = useTres()
+const { renderer, camera, invalidate, scene } = useTres()
 
 const group = shallowRef(new THREE.Group())
 let units: THREE.InstancedMesh | null = null
@@ -55,20 +56,84 @@ function texture(url: string, onReady: (t: THREE.Texture) => void) {
 
 const facadeOn = () => props.look !== 'colors' && (!!props.facadeFront || props.layout.towers.some((t) => t.facadeFront))
 
+/** Fachada de una unidad: muro claro (se tiñe con el color de estado), ventanal con marco, vidrio con
+ *  reflejo, parteluz, alféizar y franja de antepecho. Blanca de base para que el color de estado se vea limpio. */
 function windowTexture(): THREE.CanvasTexture {
+  const S = 256
+  const c = document.createElement('canvas')
+  c.width = c.height = S
+  const g = c.getContext('2d')!
+  // Muro con leve textura
+  g.fillStyle = '#f4f1ec'
+  g.fillRect(0, 0, S, S)
+  for (let i = 0; i < 900; i++) {
+    g.fillStyle = `rgba(0,0,0,${Math.random() * 0.025})`
+    g.fillRect(Math.random() * S, Math.random() * S, 2, 2)
+  }
+  // Antepecho / losa
+  g.fillStyle = '#d9d3ca'
+  g.fillRect(0, S - 26, S, 26)
+  g.fillStyle = 'rgba(0,0,0,.12)'
+  g.fillRect(0, S - 26, S, 3)
+  // Ventanal
+  const wx = 26, wy = 38, ww = S - 52, wh = S - 92
+  g.fillStyle = '#2f3a44' // marco
+  g.fillRect(wx - 6, wy - 6, ww + 12, wh + 12)
+  const glass = g.createLinearGradient(wx, wy, wx + ww, wy + wh)
+  glass.addColorStop(0, '#8fb2c9')
+  glass.addColorStop(0.45, '#5d7f97')
+  glass.addColorStop(1, '#33495b')
+  g.fillStyle = glass
+  g.fillRect(wx, wy, ww, wh)
+  // Reflejo diagonal
+  g.save()
+  g.beginPath(); g.rect(wx, wy, ww, wh); g.clip()
+  g.fillStyle = 'rgba(255,255,255,.22)'
+  g.beginPath(); g.moveTo(wx + ww * 0.15, wy); g.lineTo(wx + ww * 0.42, wy); g.lineTo(wx + ww * 0.05, wy + wh); g.lineTo(wx - ww * 0.22, wy + wh); g.fill()
+  g.fillStyle = 'rgba(255,255,255,.1)'
+  g.beginPath(); g.moveTo(wx + ww * 0.55, wy); g.lineTo(wx + ww * 0.62, wy); g.lineTo(wx + ww * 0.3, wy + wh); g.lineTo(wx + ww * 0.23, wy + wh); g.fill()
+  g.restore()
+  // Parteluz y travesaño
+  g.fillStyle = '#2f3a44'
+  g.fillRect(S / 2 - 3, wy, 6, wh)
+  g.fillRect(wx, wy + wh * 0.62, ww, 5)
+  // Alféizar con sombra
+  g.fillStyle = '#e9e4dc'
+  g.fillRect(wx - 10, wy + wh + 6, ww + 20, 7)
+  g.fillStyle = 'rgba(0,0,0,.18)'
+  g.fillRect(wx - 10, wy + wh + 13, ww + 20, 3)
+  const t = new THREE.CanvasTexture(c)
+  t.colorSpace = THREE.SRGBColorSpace
+  t.anisotropy = 8
+  return t
+}
+
+/** Sombra de contacto suave (degradado radial) para apoyar las torres en el suelo. */
+function shadowTexture(): THREE.CanvasTexture {
   const c = document.createElement('canvas')
   c.width = c.height = 128
   const g = c.getContext('2d')!
-  g.fillStyle = '#ffffff'
+  const grd = g.createRadialGradient(64, 64, 8, 64, 64, 64)
+  grd.addColorStop(0, 'rgba(0,0,0,.55)')
+  grd.addColorStop(1, 'rgba(0,0,0,0)')
+  g.fillStyle = grd
   g.fillRect(0, 0, 128, 128)
-  g.fillStyle = '#5b6b7c'
-  g.fillRect(14, 30, 42, 58) // dos ventanas por cara
-  g.fillRect(72, 30, 42, 58)
-  g.fillStyle = '#e5e7eb'
-  g.fillRect(0, 118, 128, 10) // antepecho
+  return new THREE.CanvasTexture(c)
+}
+
+/** Cielo: degradado de la paleta (café profundo abajo, toque morado Nexi arriba). */
+function skyTexture(): THREE.CanvasTexture {
+  const c = document.createElement('canvas')
+  c.width = 4; c.height = 256
+  const g = c.getContext('2d')!
+  const grd = g.createLinearGradient(0, 0, 0, 256)
+  grd.addColorStop(0, '#2a1d3d')
+  grd.addColorStop(0.45, '#2b1b16')
+  grd.addColorStop(1, '#170f0b')
+  g.fillStyle = grd
+  g.fillRect(0, 0, 4, 256)
   const t = new THREE.CanvasTexture(c)
   t.colorSpace = THREE.SRGBColorSpace
-  t.anisotropy = 4
   return t
 }
 
@@ -102,7 +167,7 @@ function build() {
   const unitGeo = track(new THREE.BoxGeometry(1, 1, 1))
 
   // Unidades
-  const mat = track(new THREE.MeshStandardMaterial({ map: track(windowTexture()), roughness: 0.75, metalness: 0.05 }))
+  const mat = track(new THREE.MeshStandardMaterial({ map: track(windowTexture()), roughness: 0.5, metalness: 0.08, envMapIntensity: 0.9 }))
   units = new THREE.InstancedMesh(unitGeo, mat, Math.max(1, l.slots.length))
   units.count = l.slots.length
   l.slots.forEach((s, i) => units!.setMatrixAt(i, unitMatrix(s, true, h)))
@@ -148,6 +213,19 @@ function build() {
   slabs.count = levels.length
   group.value.add(slabs)
   plain.push(slabs)
+
+  // Sombras de contacto bajo cada torre
+  const shTex = track(shadowTexture())
+  const shMat = track(new THREE.MeshBasicMaterial({ map: shTex, transparent: true, depthWrite: false }))
+  for (const t of l.towers) {
+    const sh = new THREE.Mesh(track(new THREE.PlaneGeometry(1, 1)), shMat)
+    sh.rotation.x = -Math.PI / 2
+    sh.rotation.z = t.rot
+    sh.position.set(t.x, 0.02, t.z)
+    sh.scale.set(t.w * 1.9, t.d * 1.9, 1)
+    sh.renderOrder = -1
+    group.value.add(sh)
+  }
 
   // Pisos especiales (lobby, parqueaderos, terraza…)
   for (const s of l.specials) {
@@ -246,6 +324,7 @@ function applyLook() {
   units.instanceMatrix.needsUpdate = true
 }
 
+let hoverIdx = -1
 const tmp = new THREE.Color()
 const white = new THREE.Color('#ffffff')
 
@@ -254,7 +333,8 @@ function paint() {
   applyLook()
   const sel = props.selectedFloor
   props.layout.slots.forEach((s, i) => {
-    tmp.set(props.colors[i] ?? '#cbd5e1')
+    tmp.set(props.colors[i] ?? '#cbd5e1').lerp(white, 0.12)
+    if (i === hoverIdx) tmp.lerp(white, 0.35)
     if (!facadeOn() && sel && (s.tower !== sel.tower || s.floor !== sel.floor)) tmp.lerp(white, 0.72)
     units!.setColorAt(i, tmp)
   })
@@ -319,17 +399,81 @@ function onUp(e: PointerEvent) {
   emit('pick', near)
 }
 
+// ── Al pasar el mouse: resaltar la unidad y avisar al visor para mostrar su etiqueta
+let hoverRaf = 0
+let lastMove: PointerEvent | null = null
+function onHover(e: PointerEvent) {
+  if (e.pointerType === 'touch') return
+  lastMove = e
+  if (hoverRaf) return
+  hoverRaf = requestAnimationFrame(() => {
+    hoverRaf = 0
+    const ev = lastMove!
+    const el = renderer.domElement as HTMLCanvasElement
+    if (!units || !camera.value || (ev.buttons & 1)) return
+    const r = el.getBoundingClientRect()
+    ndc.set(((ev.clientX - r.left) / r.width) * 2 - 1, -((ev.clientY - r.top) / r.height) * 2 + 1)
+    raycaster.setFromCamera(ndc, camera.value)
+    const hit = raycaster.intersectObject(units, false)[0]
+    const idx = hit?.instanceId ?? -1
+    if (idx !== hoverIdx) { hoverIdx = idx; paint() }
+    el.style.cursor = idx >= 0 ? 'pointer' : ''
+    emit('hover', idx >= 0 ? { slot: props.layout.slots[idx], x: ev.clientX - r.left, y: ev.clientY - r.top } : null)
+  })
+}
+function onLeave() {
+  if (hoverIdx !== -1) { hoverIdx = -1; paint() }
+  emit('hover', null)
+}
+
+// ── Entrada animada de la cámara (se acerca desde lejos y arriba)
+let introRaf = 0
+function intro() {
+  const cam = camera.value
+  if (!cam || matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  const [cx, cy, cz] = layoutCenter(props.layout)
+  const target = new THREE.Vector3(cx, cy, cz)
+  const end = cam.position.clone()
+  const start = target.clone().add(end.clone().sub(target).multiplyScalar(1.9)).add(new THREE.Vector3(0, props.layout.height * 0.6, 0))
+  const t0 = performance.now()
+  const step = (now: number) => {
+    const k = Math.min(1, (now - t0) / 1400)
+    const e = 1 - Math.pow(1 - k, 3)
+    cam.position.lerpVectors(start, end, e)
+    cam.lookAt(target)
+    invalidate()
+    if (k < 1) introRaf = requestAnimationFrame(step)
+  }
+  introRaf = requestAnimationFrame(step)
+}
+
+let pmrem: THREE.PMREMGenerator | null = null
 onMounted(() => {
   build()
   const el = renderer.domElement as HTMLCanvasElement
   el.addEventListener('pointerdown', onDown)
   el.addEventListener('pointerup', onUp)
+  el.addEventListener('pointermove', onHover)
+  el.addEventListener('pointerleave', onLeave)
+  // Reflejos suaves de estudio y cielo con la paleta
+  try {
+    const sc = scene.value as unknown as THREE.Scene
+    pmrem = new THREE.PMREMGenerator(renderer as unknown as THREE.WebGLRenderer)
+    sc.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture
+    if (!props.sitePlan) sc.background = skyTexture()
+  } catch { /* renderer sin soporte: se queda la luz básica */ }
+  requestAnimationFrame(intro)
 })
 
 onBeforeUnmount(() => {
   const el = renderer.domElement as HTMLCanvasElement
   el.removeEventListener('pointerdown', onDown)
   el.removeEventListener('pointerup', onUp)
+  el.removeEventListener('pointermove', onHover)
+  el.removeEventListener('pointerleave', onLeave)
+  cancelAnimationFrame(introRaf)
+  cancelAnimationFrame(hoverRaf)
+  pmrem?.dispose()
   clear()
 })
 

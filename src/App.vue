@@ -8,6 +8,7 @@
   <script setup lang="ts">
   import './assets/css/styles.css';
   import './assets/css/visor3d.css';
+  import './assets/css/theme-plus.css';
   import AlertsContainer from './components/AlertsContainer.vue'
   import VoiceAssistant from './components/VoiceAssistant.vue'
   import { useRoute } from 'vue-router'

@@ -23,7 +23,7 @@
         <router-link v-if="canUseVisor3d" to="/edificios" class="nav-link" :class="{ active: route.path.startsWith('/edificios') }"
           @click="closeMobileMenu">
           <font-awesome-icon icon="cube" class="nav-icon" />
-          <span class="nav-text">Edificios 3D</span>
+          <span class="nav-text">Inmobiliarias</span>
         </router-link>
 
         <router-link to="/sobre-nosotros" class="nav-link" :class="{ active: isActive('/sobre-nosotros') }"
@@ -160,7 +160,7 @@
 
           <div v-if="canUseVisor3d" @click="goEdificios" class="dropdown-item">
             <font-awesome-icon icon="building" class="item-icon" />
-            <div class="item-text">Edificios 3D</div>
+            <div class="item-text">Inmobiliarias</div>
           </div>
 
           <div class="dropdown-divider"></div>
@@ -191,7 +191,7 @@
             <font-awesome-icon icon="building" /> {{ $t('navbar.links.properties') }}
           </router-link>
           <router-link v-if="canUseVisor3d" to="/edificios" class="m-link" @click="closeMobileMenu">
-            <font-awesome-icon icon="cube" /> Edificios 3D
+            <font-awesome-icon icon="cube" /> Inmobiliarias
           </router-link>
           <router-link to="/sobre-nosotros" class="m-link" @click="closeMobileMenu">
             <font-awesome-icon icon="people-group" /> {{ $t('navbar.links.about') }}
@@ -212,7 +212,7 @@
              <div @click="goAjustes" class="m-link"><font-awesome-icon icon="cog" /> {{ $t('navbar.dropdown.settings') }}</div>
              <div @click="openMyRequestsModalFn" class="m-link"><font-awesome-icon icon="calendar-check" /> {{ $t('navbar.dropdown.myRequests') }}</div>
              <div @click="goMantenimiento" class="m-link"><font-awesome-icon icon="wrench" /> {{ $t('navbar.dropdown.maintenance') }}</div>
-             <div v-if="canUseVisor3d" @click="goEdificios" class="m-link"><font-awesome-icon icon="building" /> Edificios 3D</div>
+             <div v-if="canUseVisor3d" @click="goEdificios" class="m-link"><font-awesome-icon icon="building" /> Inmobiliarias</div>
              
              <div v-if="currentUser?.role === 'admin'" @click="goToAdminPanel" class="m-link admin"><font-awesome-icon icon="shield-alt" /> Admin</div>
              

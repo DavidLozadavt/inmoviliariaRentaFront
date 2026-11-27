@@ -494,8 +494,8 @@ onMounted(load)
 
 <style scoped>
 .dist { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 18px; align-items: start; }
-.pick { display: flex; flex-direction: column; gap: 10px; background: rgba(0,0,0,.18); border: 1px solid var(--v3d-border); border-radius: 14px; padding: 14px; position: sticky; top: 84px; }
-.seg { display: grid; grid-template-columns: 1fr 1fr; background: rgba(0,0,0,.25); border-radius: 10px; padding: 3px; }
+.pick { display: flex; flex-direction: column; gap: 10px; background: var(--v3d-surface-2); border: 1px solid var(--v3d-border); border-radius: 14px; padding: 14px; position: sticky; top: 84px; }
+.seg { display: grid; grid-template-columns: 1fr 1fr; background: var(--v3d-surface-2); border-radius: 10px; padding: 3px; }
 .seg button { border: 0; background: transparent; color: var(--v3d-muted); padding: 8px 6px; border-radius: 8px; cursor: pointer; font-size: 13px; }
 .seg button.on { background: var(--v3d-accent-soft); color: var(--v3d-accent); font-weight: 600; }
 .hint { color: var(--v3d-muted); font-size: 12px; line-height: 1.5; }
@@ -506,14 +506,14 @@ onMounted(load)
 .type-card .code { width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center; font-weight: 800; color: #1c120e; flex: none; }
 .tinfo { display: flex; flex-direction: column; flex: 1; min-width: 0; }
 .tinfo small { color: var(--v3d-muted); font-size: 11px; }
-.count { font-family: ui-monospace, monospace; font-size: 12px; background: rgba(0,0,0,.3); border-radius: 999px; padding: 2px 9px; }
+.count { font-family: ui-monospace, monospace; font-size: 12px; background: var(--v3d-surface-2); border-radius: 999px; padding: 2px 9px; }
 .lbl { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--v3d-muted); display: flex; flex-direction: column; gap: 4px; }
 select { padding: 7px 9px; border: 1px solid var(--v3d-border); border-radius: 8px; background: var(--v3d-surface-2); color: var(--v3d-text); font-size: 13px; min-width: 0; }
 .chips { display: flex; flex-wrap: wrap; gap: 4px; }
 .chips button { min-width: 36px; border: 1px solid var(--v3d-border); background: transparent; color: var(--v3d-text); border-radius: 7px; padding: 5px 6px; font-family: ui-monospace, monospace; font-size: 12px; cursor: pointer; }
 .chips button.on { background: var(--v3d-text); color: #1c120e; }
 .units { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-.units button { position: relative; display: flex; flex-direction: column; align-items: center; border: 1px solid var(--v3d-border); background: rgba(0,0,0,.2); color: var(--v3d-text); border-radius: 9px; padding: 7px 4px; cursor: pointer; font-weight: 700; }
+.units button { position: relative; display: flex; flex-direction: column; align-items: center; border: 1px solid var(--v3d-border); background: var(--v3d-surface-2); color: var(--v3d-text); border-radius: 9px; padding: 7px 4px; cursor: pointer; font-weight: 700; }
 .units button small { font-weight: 400; font-size: 10px; color: var(--v3d-muted); }
 .units button.on { border-color: var(--v3d-accent); background: var(--v3d-accent-soft); }
 .units i { position: absolute; top: 5px; right: 5px; width: 7px; height: 7px; border-radius: 50%; background: var(--v3d-accent); }
@@ -532,7 +532,7 @@ select { padding: 7px 9px; border: 1px solid var(--v3d-border); border-radius: 8
 .primary { background: linear-gradient(135deg, var(--v3d-accent), var(--v3d-accent-strong)); color: var(--v3d-on-accent); border: 0; border-radius: 10px; padding: 9px 16px; cursor: pointer; font-weight: 700; font-size: 14px; }
 .primary.disabled { opacity: .6; pointer-events: none; }
 .primary.build { font-size: 15px; padding: 11px 18px; }
-.views { display: inline-flex; align-self: flex-start; background: rgba(0,0,0,.25); border-radius: 12px; padding: 4px; gap: 2px; }
+.views { display: inline-flex; align-self: flex-start; background: var(--v3d-surface-2); border-radius: 12px; padding: 4px; gap: 2px; }
 .views button { border: 0; background: transparent; color: var(--v3d-muted); padding: 8px 14px; border-radius: 9px; cursor: pointer; font-size: 13px; }
 .views button.on { background: var(--v3d-accent); color: var(--v3d-on-accent); font-weight: 800; }
 .ghost { background: transparent; color: var(--v3d-text); border: 1px solid var(--v3d-border); border-radius: 10px; padding: 9px 14px; cursor: pointer; font-size: 13px; }
@@ -540,7 +540,7 @@ select { padding: 7px 9px; border: 1px solid var(--v3d-border); border-radius: 8
 .build-btn { background: var(--v3d-accent-soft); color: var(--v3d-accent); border: 1px solid var(--v3d-accent); border-radius: 999px; padding: 5px 12px; font-weight: 700; font-size: 12px; cursor: pointer; }
 .build-btn:hover { background: var(--v3d-accent); color: var(--v3d-on-accent); }
 .groups { display: flex; flex-direction: column; gap: 14px; }
-.group { border: 1px solid var(--v3d-border); border-radius: 16px; background: rgba(0,0,0,.2); padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.group { border: 1px solid var(--v3d-border); border-radius: 16px; background: var(--v3d-surface-2); padding: 14px; display: flex; flex-direction: column; gap: 10px; }
 .group > header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .gico { font-size: 24px; }
 .gtitle { display: flex; flex-direction: column; flex: 1; min-width: 0; }
@@ -551,7 +551,7 @@ select { padding: 7px 9px; border: 1px solid var(--v3d-border); border-radius: 8
 .checklist span { font-size: 11px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--v3d-border); color: var(--v3d-muted); }
 .checklist span.ok { color: #4ade80; border-color: rgba(34,197,94,.4); }
 .photos { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
-.photo { display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--v3d-border); border-radius: 12px; padding: 6px; background: rgba(0,0,0,.18); }
+.photo { display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--v3d-border); border-radius: 12px; padding: 6px; background: var(--v3d-surface-2); }
 .thumb { position: relative; aspect-ratio: 4 / 3; background: #1c120e; border-radius: 8px; overflow: hidden; }
 .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .proj, .start { position: absolute; top: 6px; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 999px; background: rgba(28,18,14,.85); }

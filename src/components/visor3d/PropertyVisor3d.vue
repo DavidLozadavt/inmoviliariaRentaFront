@@ -110,7 +110,7 @@ b.rented, b.sold { background: rgba(239,68,68,.18); color: #f87171; }
 .spaces { display: flex; flex-direction: column; gap: 6px; }
 .lbl { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--v3d-muted); }
 .strip { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 4px; }
-.strip button { position: relative; flex: 0 0 auto; width: 170px; border: 1px solid var(--v3d-border); background: rgba(0,0,0,.2); border-radius: 12px; overflow: hidden; padding: 0; color: var(--v3d-text); cursor: pointer; text-align: left; transition: border-color .2s, transform .2s; }
+.strip button { position: relative; flex: 0 0 auto; width: 170px; border: 1px solid var(--v3d-border); background: var(--v3d-surface-2); border-radius: 12px; overflow: hidden; padding: 0; color: var(--v3d-text); cursor: pointer; text-align: left; transition: border-color .2s, transform .2s; }
 .strip button:hover { border-color: var(--v3d-accent); transform: translateY(-2px); }
 .strip img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
 .strip span { display: block; font-size: 13px; padding: 6px 10px; }
