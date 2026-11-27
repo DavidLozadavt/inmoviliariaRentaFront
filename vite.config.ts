@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { templateCompilerOptions } from '@tresjs/core'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -7,7 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue({ ...templateCompilerOptions })],
 
   resolve: {
     alias: {
@@ -25,6 +26,8 @@ export default defineConfig({
     port: 5174,
     strictPort: false,
     proxy: {
+      // Fotos 360° del visor 3D: mismo origen en desarrollo (artisan serve no manda CORS en /storage)
+      '/storage': { target: 'http://127.0.0.1:8004', changeOrigin: true },
       '/api': {
         target: 'http://localhost:8004',
         changeOrigin: true,

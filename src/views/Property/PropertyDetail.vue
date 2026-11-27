@@ -77,6 +77,9 @@
       </div>
 
       <!-- ── Main Grid ── -->
+      <!-- Visor 3D del edificio, a todo el ancho (solo si la unidad pertenece a uno) -->
+      <PropertyVisor3d v-if="(property as any).building_id" :property-id="(property as any).id" />
+
       <div class="pd-grid">
 
         <!-- ── Left / Main column ── -->
@@ -369,7 +372,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, defineAsyncComponent } from 'vue'
+const PropertyVisor3d = defineAsyncComponent(() => import('@/components/visor3d/PropertyVisor3d.vue'))
 import { useRouter, useRoute } from 'vue-router'
 import RequestVisitModal from '../../components/modals/ModalRequest/RequestVisitModal.vue'
 import MapView from '../../components/modals/Maps/MapView.vue'

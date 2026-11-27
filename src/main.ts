@@ -119,6 +119,10 @@ library.add(
   // Brand
   faFacebookF, faInstagram, faLinkedinIn, faTwitter,
 );
+// Visor 3D de edificios (enlace del navbar)
+import { faCube } from '@fortawesome/free-solid-svg-icons'
+library.add(faCube)
+
 
 // ── Application bootstrap ─────────────────────────────────────────────────
 const app = createApp(App);

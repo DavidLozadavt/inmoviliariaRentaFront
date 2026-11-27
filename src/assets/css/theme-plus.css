@@ -1,0 +1,36 @@
+/* NexiLiving · capa de diseño global: paleta Living (café, dorado, carmesí) + morado Nexi,
+   scroll personalizado, progreso de lectura, apariciones al hacer scroll y foco accesible. */
+:root {
+  --nl-bg: #2e1d17;
+  --nl-gold: #da9c5f;
+  --nl-gold-strong: #c9853d;
+  --nl-crimson: #b71540;
+  --nexi-purple: #8b5cf6;
+  --nexi-purple-soft: rgba(139, 92, 246, 0.18);
+  --nl-gradient: linear-gradient(135deg, var(--nl-gold) 0%, var(--nl-crimson) 55%, var(--nexi-purple) 100%);
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+::selection { background: rgba(139, 92, 246, 0.45); color: #fff; }
+
+/* Barra de scroll */
+* { scrollbar-width: thin; scrollbar-color: var(--nl-gold) rgba(0, 0, 0, 0.25); }
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: #1f140f; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--nl-gold), var(--nl-crimson) 60%, var(--nexi-purple));
+  border-radius: 999px; border: 3px solid #1f140f;
+}
+::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #f0b878, var(--nexi-purple)); }
+
+/* Foco visible y consistente */
+:focus-visible { outline: 2px solid var(--nexi-purple); outline-offset: 2px; border-radius: 6px; }
+
+/* Aparición al hacer scroll (la activa la directiva v-reveal / auto-reveal del layout) */
+.nl-reveal { opacity: 0; transform: translateY(22px) scale(0.985); transition: opacity 0.7s cubic-bezier(.2,.7,.2,1), transform 0.7s cubic-bezier(.2,.7,.2,1); }
+.nl-reveal.nl-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .nl-reveal { opacity: 1; transform: none; transition: none; } }
+
+

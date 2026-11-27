@@ -31,6 +31,11 @@ const NotFoundView = () => import("@/views/NotFoundView.vue");
 const FaqView = () => import("@/views/FaqView.vue");
 const LegalNoticeView = () => import("@/views/Legal/LegalNoticeView.vue");
 const PrivacyPolicyView = () => import("@/views/Legal/PrivacyPolicyView.vue");
+// Visor 3D de edificios (TresJS y three se cargan solo dentro de estas vistas)
+const Visor3dList = () => import("@/views/Visor3d/BuildingsListView.vue");
+const Visor3dView = () => import("@/views/Visor3d/BuildingViewerView.vue");
+const Visor3dEditor = () => import("@/views/Visor3d/BuildingEditorView.vue");
+const Visor3dPublic = () => import("@/views/Visor3d/PublicViewerView.vue");
 
 // ── Admin routes ──────────────────────────────────────────────────────────
 import { adminRoutes } from "@/admin/router/admin.routes";
@@ -127,6 +132,30 @@ const routes: RouteRecordRaw[] = [
         meta: { title: "Aviso Legal" },
       },
       {
+        path: "/edificios",
+        name: "Visor3dList",
+        component: Visor3dList,
+        meta: { title: "Inmobiliarias", requiresAuth: true },
+      },
+      {
+        path: "/edificios/nuevo",
+        name: "Visor3dNew",
+        component: Visor3dEditor,
+        meta: { title: "Nuevo edificio", requiresAuth: true },
+      },
+      {
+        path: "/edificios/:id(\\d+)",
+        name: "Visor3dView",
+        component: Visor3dView,
+        meta: { title: "Visor 3D", requiresAuth: true },
+      },
+      {
+        path: "/edificios/:id(\\d+)/editar",
+        name: "Visor3dEdit",
+        component: Visor3dEditor,
+        meta: { title: "Editar edificio", requiresAuth: true },
+      },
+      {
         path: "/politica-privacidad",
         name: "PrivacyPolicy",
         component: PrivacyPolicyView,
@@ -138,6 +167,13 @@ const routes: RouteRecordRaw[] = [
   // Admin panel
   ...adminRoutes,
 
+  // Visor 3D público: enlace firmado, sin login, se puede incrustar en un iframe (sin layout)
+  {
+    path: "/visor/:token",
+    name: "Visor3dPublic",
+    component: Visor3dPublic,
+    meta: { title: "Visor 3D" },
+  },
   // Map views (no layout)
   {
     path: "/mapa",
